@@ -1,7 +1,7 @@
 dryish.css
 ==========
 
-A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css) principles, with some BEM and SMACSS touches.
+A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches.
 
 # Principles of Dryish
 
@@ -10,24 +10,28 @@ A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremycla
 - Specificity no deeper than one level. Yes, that hard. Only for modifiers (in some cases) are allowed to access level two.
 - Don't repeat yourself (DRY). Avoid it.
 
-### Sass guidelines
+### Dryish S2 Sass
 
-- No variables.
-- No mixins.
+[Sass](http://sass-lang.com/) is incredible. It really gives superpowers to CSS. But we need to limit it's flight, to avoid duplication. There are two rules on *Dryish.css*, as follows:
 
-It will avoid duplication. From now on, `@extend` is your best friend.
+- No variables outsite setup files. Create a unique file selector and extend from there.
+- No mixins. They are super, but also make your compiled file super redundant.
+
+From now on, `@extend` is your best friend.
+
+### Guidelines
 
 > Why this style isn't part of a group?
 
 Make individual selectors as rare and sparse as possible.
 
-Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) like when you're working with [React.js](https://facebook.github.io/react). Split elements in smaller elements. Draw boxes around every element (and its children) in the mock and give them all names accordingly to its style, not the content. Forget about classes like `.profile-card` or `.about-page-title`. Think in more reusable and simple classes like `.box` or `.big-text`. [Nicole Sullivan](http://www.stubbornella.org/content/author/nicole/) talked about this on her [article](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/). Read it.
+Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) like when you're working with [React.js](https://facebook.github.io/react). Split elements in smaller elements. Draw boxes around every element (and its children) in the mock and give them all names accordingly to its style, not the content. Forget about classes like `.profile-card` or `.about-page-title`. Think in more reusable and simple classes like `.box` or `.big-text`. [Nicole Sullivan](http://www.stubbornella.org/content/author/nicole/) talked about this on her [article](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
 
 ![Elements Split](http://www.stubbornella.org/content/wp-content/uploads/2010/06/Facebook-ImageBlock-216x1024.png)
 
 # Naming conventions
 
-Dryish.css offers five types of selectors, presented in the code below:
+*Dryish.css* offers five types of selectors, all presented in the code below:
 
 ```
 <div class="christmas-tree">
@@ -43,7 +47,7 @@ Dryish.css offers five types of selectors, presented in the code below:
 ```
 
 #### Block
-Independent, this selector has the highest level. Should represent the container of some kind of style.
+Independent, this selector has the highest level. Should represent a container.
 
 ###### Example
 `.christmas-tree`
@@ -61,7 +65,7 @@ Prefixed with `.mod-`. Try to place these modifiers on the higher level, to make
 
 Check the list, and create a new one if not.
 
-###### Example
+###### Examples
 ```
 .mod-green
 .mod-bordered
@@ -69,9 +73,9 @@ Check the list, and create a new one if not.
 ```
 
 #### State
-Prefixed with `.is-`. The state selectors manage the state of an element and the user interaction with it. This selector type works great with Javascript. It's allowed to use `!importante` here. But ONLY here.
+Prefixed with `.is-`. The state selectors manage the state of an element and the user interaction. This selector type works great with Javascript. And is the ONLY selector type where is allowed to use `!importante`. Only ONLY, ok? :rage:
 
-###### Example
+###### Examples
 ```
 .is-hidden
 .is-active
@@ -81,9 +85,9 @@ Prefixed with `.is-`. The state selectors manage the state of an element and the
 ```
 
 #### Utilities
-Prefixed with `.u-`. Generic helper classes.
+Prefixed with `.u-`. For generic helper classes.
 
-###### Example
+###### Examples
 ```
 .u-clearfix
 .u-responsive
@@ -91,6 +95,14 @@ Prefixed with `.u-`. Generic helper classes.
 
 ## Implementation
 
+- Install Sass.
+
+*Dryish.css* is all based on it.
+
 - Install Sass Linter.
 
-It will help you write following the best pratices by default. Without IDs, overqualified selectors, etc.
+It will help you write following the best pratices by default. Without IDs, overqualified selectors, etc. :sunglasses:
+
+- Clone this repository inside your project's folder.
+
+We will provide access through NPM, Bower, etc; in a near future.
