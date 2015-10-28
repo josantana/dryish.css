@@ -10,7 +10,7 @@ A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremycla
 - Specificity no deeper than one level. Yes, that hard. Only for modifiers (in some cases) are allowed to access level two.
 - Don't repeat yourself (DRY). Avoid it.
 
-### Dryish S2 Sass
+### Dryish :heart: Sass
 
 [Sass](http://sass-lang.com/) is incredible. It really gives superpowers to CSS. But we need to limit it's flight, to avoid duplication. There are two rules on *Dryish.css*, as follows:
 
@@ -101,7 +101,7 @@ Prefixed with `.u-`. For generic helper classes.
 
 - Install Sass Linter.
 
-It will help you write following the best pratices by default. Without IDs, overqualified selectors, etc. :sunglasses:
+It will help you write following the best pratices by default. Without IDs, overqualified selectors, etc.
 
 - Clone this repository inside your project's folder.
 
