@@ -41,24 +41,28 @@ Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) lik
 ```
 
 #### Block
-`.media-box`
+`.christmas-tree`
 
 Independent, this selector has the highest level. Should represent the container of some kind of style.
 
 #### Element
-`.media-box--picture`
+`.christmas-tree--lights`
 
 A selector that has dependency of another element. Prefixed with `--` before the name of the block.
 
 #### Modifier
 `.mod-green .mod-bordered .mod-no-icon`
 
-Prefixed with `.mod-`. Try to place these modifiers on the higher level, to make it more reusable. But if you need something super specific, I have good news: This should be the only selector that could be child of another selector.
+Prefixed with `.mod-`. Try to place these modifiers on the higher level, to make it more reusable. But if you need something super specific, I have good news: This should be the only selector that could be child of another selector. It's recommended to place all your modifiers in a unique stylesheet. So, before creating a new one, you ask yourself:
+
+> Haven't I made a modifier for this?
+
+Check the list, and create a new one if not.
 
 #### State
 `.is-hidden .is-active .is-current .is-collapsed .is-disabled`
 
-Prefixed with `.is-`. Like `.is-hidden`, `.is-active`, `.is-current`, `.is-collapsed`, `.is-disabled`, and so on. Works great with Javascript. It's allowed to use `!importante` here. But ONLY here.
+Prefixed with `.is-`. Works great with Javascript. It's allowed to use `!importante` here. But ONLY here.
 
 #### Utilities
 `.u-clearfix .u-responsive`
