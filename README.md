@@ -3,7 +3,7 @@ dryish.css
 
 A start point based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css) principles. Also some BEM and SMACSS.
 
-### Principles of Dryish
+# Principles of Dryish
 
 - Design for reusability.
 - Keep style separate from content.
@@ -25,7 +25,7 @@ Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) lik
 
 ![Elements Split](http://www.stubbornella.org/content/wp-content/uploads/2010/06/Facebook-ImageBlock-216x1024.png)
 
-### Naming conventions
+# Naming conventions
 
 ```
 <div class="media-box">
