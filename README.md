@@ -35,6 +35,11 @@ Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) lik
 </div>
 ```
 
+#### Utilities
+`.u-hidden`
+
+Prefixed with `.u-`. Generic helper classes.
+
 #### Block
 `.media-box`
 

@@ -1,0 +1,48 @@
+// Media Queries
+
+.small-devices { display: none !important; }
+
+.medium-devices,
+.large-devices,
+.medium-large-devices {
+    display: none !important;
+}
+
+@media (min-width: 767px) {
+    .small-devices,
+    .large-devices {
+        display: none !important;
+    }
+
+    .medium-devices,
+    .medium-large-devices {
+        display: block !important;
+    }
+
+    .flex {
+        &.medium-devices,
+        &.medium-large-devices {
+            display: flex !important;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .small-devices,
+    .medium-devices {
+        display: none !important;
+    }
+
+    .large-devices,
+    .medium-large-devices {
+        display: block !important;
+    }
+
+    .flex {
+        &.large-devices,
+        &.medium-large-devices {
+            display: flex !important;
+        }
+    }
+}
