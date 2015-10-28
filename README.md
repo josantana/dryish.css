@@ -7,7 +7,7 @@ A start point based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-
 
 - Design for reusability.
 - Keep style separate from content.
-- Specificity no deeper than 1 level. Yes, that hard. 2 for exceptions.
+- Specificity no deeper than 1 level. Yes, that hard. Level 2, only for modifiers in some cases.
 - Don't repeat yourself (DRY). Avoid it.
 
 ### Sass guidelines
@@ -28,32 +28,42 @@ Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) lik
 # Naming conventions
 
 ```
-<div class="media-box">
-    <div class="media-box--picture is-active">
-        <img src="photo.jpg" />
+<div class="christmas-tree">
+    <div class="christmas-tree--star is-active">
+        <img src="shine.png" />
     </div>
+    <ul class="christmas-tree--lights">
+        <li class="christmas-tree--light mod-red"><svg /></li>
+        <li class="christmas-tree--light mod-green"><svg /></li>
+        <li class="christmas-tree--light mod-blue"><svg /></li>
+    </ul>
 </div>
 ```
-
-#### Utilities
-`.u-hidden`
-
-Prefixed with `.u-`. Generic helper classes.
 
 #### Block
 `.media-box`
 
-Independent, this element has the highest level.
+Independent, this selector has the highest level. Should represent the container of some kind of style.
 
 #### Element
 `.media-box--picture`
 
-An element that has dependency of another element. Prefixed with `--` before the name of the block.
+A selector that has dependency of another element. Prefixed with `--` before the name of the block.
+
+#### Modifier
+`.mod-green .mod-bordered .mod-no-icon`
+
+Prefixed with `.mod-`. Try to place these modifiers on the higher level, to make it more reusable. But if you need something super specific, I have good news: This should be the only selector that could be child of another selector.
 
 #### State
-`.is-active`
+`.is-hidden .is-active .is-current .is-collapsed .is-disabled`
 
-Prefixed with `.is-`. Like `.is-active`, `.is-current`, `.is-collapsed`, and so on. Works great with Javascript. It's allowed to use `!importante` here. ONLY here.
+Prefixed with `.is-`. Like `.is-hidden`, `.is-active`, `.is-current`, `.is-collapsed`, `.is-disabled`, and so on. Works great with Javascript. It's allowed to use `!importante` here. But ONLY here.
+
+#### Utilities
+`.u-clearfix .u-responsive`
+
+Prefixed with `.u-`. Generic helper classes.
 
 ## Implementation
 
