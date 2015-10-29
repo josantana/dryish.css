@@ -1,6 +1,6 @@
 {
   "name": "dryish.css",
-  "description": "A start point based on DRY CSS (by Jeremy Clarke) and OOCSS principles. Also some BEM and SMACSS.",
+  "description": "A CSS methodology based on DRY CSS and OOCSS, bundled with helpful selectors and a flex-based layout system.",
   "url": "http://josantana.github.io",
   "author": "Jo Santana",
   "copyright": "2015",
@@ -17,7 +17,7 @@
     "gulp-header": "^1.7.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-ruby-sass": "^2.0.5",
+    "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0"
   },
   "dependencies": {}
