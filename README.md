@@ -1,7 +1,7 @@
 dryish.css
 ==========
 
-A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches.
+A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches. Bundled with helpful selectors and a super simple flex-based layout system. A start point for any front-end project.
 
 # Principles of Dryish
 

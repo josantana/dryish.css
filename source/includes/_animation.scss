@@ -1,0 +1,33 @@
+// SHAKE ERROR
+// ========================================================================== //
+
+@keyframes negative {
+    0% { transform: translateX(0); }
+    12.5% { transform: translateX(-6px) rotateY(-5deg); }
+    37.5% { transform: translateX(5px) rotateY(4deg); }
+    62.5% { transform: translateX(-3px) rotateY(-2deg); }
+    87.5% { transform: translateX(2px) rotateY(1deg); }
+    100% { transform: translateX(0); }
+}
+
+.shake-error {
+    animation: negative 400ms ease-in-out;
+}
+
+// SMOOTH FADE IN/OUT
+// ========================================================================== //
+
+[class*="u-fade-"] {
+    transition: visibility 0s linear .25s, opacity .25s linear;
+}
+
+.u-fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.u-fade-in {
+    opacity: 1;
+    transition-delay: 0;
+    visibility: visible;
+}

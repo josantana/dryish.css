@@ -1,5 +1,5 @@
 // ALL
-// =============================================================================
+// ========================================================================== //
 
 // 1. Prevent margin and border from affecting element width.
 // 2. `input[type='search']` overrides normalize.css more specific rule.
@@ -20,7 +20,7 @@ input[type='search'] {
 }
 
 // HTML 5
-// =============================================================================
+// ========================================================================== //
 
 // Removes the default spacing and border for appropriate elements.
 
@@ -86,7 +86,7 @@ template {
 }
 
 // LINKS
-// =============================================================================
+// ========================================================================== //
 
 a {
     // Remove the gray background color from active links in IE 10.
@@ -102,7 +102,7 @@ a {
 }
 
 // TEXT
-// =============================================================================
+// ========================================================================== //
 
 // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
 
@@ -162,7 +162,7 @@ sub {
 }
 
 // EMBEDDED
-// =============================================================================
+// ========================================================================== //
 
 // Remove border when inside `a` element in IE 8/9/10.
 
@@ -171,14 +171,26 @@ img {
     display: block;
 }
 
-// Correct overflow not hidden in IE 9/10/11.
+// Icons
 
-svg:not(:root) {
-    overflow: hidden;
+svg {
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    transform: translate3d(0, 0, 0); // Fix webkit/blink poor rendering issues
+
+    // Correct overflow not hidden in IE 9/10/11.
+
+    &:not(:root) {
+        overflow: hidden;
+    }
 }
 
 // GROUPING
-// =============================================================================
+// ========================================================================== //
 
 // Address margin not present in IE 8/9 and Safari.
 
@@ -210,7 +222,7 @@ samp {
 }
 
 // FORMS
-// =============================================================================
+// ========================================================================== //
 
 // Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set.
 
@@ -254,7 +266,7 @@ input[type='submit'] {
 
 button[disabled],
 html input[disabled] {
-    cursor: default;
+    @extend %is-disabled;
 }
 
 // Remove inner padding and border in Firefox 4+.
@@ -267,12 +279,14 @@ input::-moz-focus-inner {
 
 // Work around a Firefox/IE bug where the transparent `button` background results in a loss of the default `button` focus styles.
 // 1. Address `overflow` set to `hidden` in IE 8/9/10/11.
+// 2. Prevent button text from being selectable.
 
 button {
     background: transparent;
     border: 0;
     overflow: visible; // 1
     padding: 0;
+    user-select: none; // 2
 
     &:focus {
         outline: 1px dotted;
@@ -352,7 +366,7 @@ optgroup {
 }
 
 // TABLES
-// =============================================================================
+// ========================================================================== //
 
 // Remove most spacing between table cells.
 
@@ -367,7 +381,7 @@ th {
 }
 
 // ELSE
-// =============================================================================
+// ========================================================================== //
 
 iframe {
     border: 0;
@@ -385,3 +399,31 @@ ul {
 [tabindex='-1']:focus {
     outline: none !important;
 }
+
+// HELPERS
+// ========================================================================== //
+
+// Clearfix: For clearing floats like a boss
+
+%clearfix {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.u-clearfix { @extend %clearfix; }
+
+%reset {
+    margin: 0;
+    padding: 0;
+}
+
+.u-reset { @extend %reset; }

@@ -1,28 +1,80 @@
+// Bulletproof font-face technique by Paul Irish (http://is.gd/sPTEJj)
+
+@mixin font-face ($name, $path) {
+    @font-face {
+        font-family: $name;
+        font-style: normal;
+        font-weight: normal;
+        src: url('#{$path}#{$name}.eot?#iefix') format('embedded-opentype'),
+        url('#{$path}#{$name}.ttf') format('truetype'),
+        url('#{$path}#{$name}.woff') format('woff'),
+        url('#{$path}#{$name}.svg#@{name}') format('svg');
+    }
+}
+
+// Image replacement for background-image
+
+%hidden-text {
+    // First technique by Scott Kellman
+
+    // overflow: hidden;
+    // text-indent: 100%;
+    // white-space: nowrap;
+
+    // Second technique by Nicolas Gallagher
+
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+.u-hidden-text { @extend %hidden-text; }
+
+// Smooth font rendering
+
+%smooth-font {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-shadow: 1px 1px 1px rgba(color($black), .004);
+}
+
+// Our font-family for coding
+
+%code-font {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+
+pre,
+code,
+.code-font {
+    @extend %code-font;
+}
+
 // Word breaking
 // Break strings when their length exceeds the width of their container.
 
 .u-text-break {
-    word-wrap: break-word !important;
+    word-wrap: break-word;
 }
 
 // Horizontal text alignment
 
 .u-text-center {
-    text-align: center !important;
+    text-align: center;
 }
 
 .u-text-left {
-    text-align: left !important;
+    text-align: left;
 }
 
 .u-text-right {
-    text-align: right !important;
+    text-align: right;
 }
 
 // Inherit the ancestor's text color.
 
-.u-text-inheritcolor {
-    color: inherit !important;
+.u-text-inherit-color {
+    color: inherit;
 }
 
 // Enables font kerning in all browsers.
@@ -31,16 +83,18 @@
 // 2. Chrome (not Windows), Firefox, IE 10+
 // 3. Safari 7 and future browsers
 
-.u-text-kern {
-    text-rendering: optimizeLegibility; /* 1 */
-    font-feature-settings: "kern" 1; /* 2 */
-    font-kerning: normal; /* 3 */
+%text-kern {
+    font-feature-settings: 'kern' 1; // 2
+    font-kerning: normal; // 3
+    text-rendering: optimizeLegibility; // 1
 }
+
+.u-text-kern { @extend %text-kern; }
 
 // Prevent whitespace wrapping
 
 .u-text-nowrap {
-    white-space: nowrap !important;
+    white-space: nowrap;
 }
 
 // Text truncation
@@ -49,9 +103,9 @@
 // 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor nodes.
 
 .u-text-truncate {
-    max-width: 100%; /* 1 */
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-    word-wrap: normal !important; /* 2 */
+    max-width: 100%; // 1
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; // 2
 }

@@ -1,0 +1,38 @@
+// POSITION
+// ========================================================================== //
+
+// Position fixed
+// 1. Make sure fixed elements are promoted into a new layer, for performance reasons.
+
+%absolute {
+    position: absolute;
+}
+
+%fixed {
+    backface-visibility: hidden; // 1
+    position: fixed;
+}
+
+%relative {
+    position: relative;
+}
+
+// FILL
+// ========================================================================== //
+
+%fit {
+    @extend %absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.fit { @extend %fit; }
+
+%fullfill {
+    height: 100vh;
+    margin: 0;
+}
+
+.fullfill { @extend %fullfill; }

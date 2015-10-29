@@ -1,0 +1,48 @@
+// SHAPES
+// ========================================================================== //
+
+// Build custom shapes with just CSS
+
+@mixin triangle-shape {
+    border: solid transparent;
+    height: 0;
+    transform: rotate(360deg);
+    width: 0;
+}
+
+@mixin triangle ($kind, $size, $color) {
+    @include triangle-shape;
+    @if $kind == 'top'
+    {
+        border-bottom-color: $color;
+        border-width: 0 $size $size;
+    } @else if $kind == 'topright'
+    {
+        border-right-color: $color;
+        border-width: 0 ($size * 1.5) $size 0;
+    } @else if $kind == 'right'
+    {
+        border-left-color: $color;
+        border-width: $size 0 $size $size;
+    } @else if $kind == 'bottomright'
+    {
+        border-bottom-color: $color;
+        border-width: 0 0 $size ($size * 1.5);
+    } @else if $kind == 'bottom'
+    {
+        border-top-color: $color;
+        border-width: $size $size 0;
+    } @else if $kind == 'bottomleft'
+    {
+        border-left-color: $color;
+        border-width: $size 0 0 ($size * 1.5);
+    } @else if $kind == 'left'
+    {
+        border-right-color: $color;
+        border-width: $size $size $size 0;
+    } @else if $kind == 'topleft'
+    {
+        border-top-color: $color;
+        border-width: $size ($size * 1.5) 0 0;
+    }
+}

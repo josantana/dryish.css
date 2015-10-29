@@ -1,4 +1,5 @@
-// Color Palette
+// COLOR PALLETE
+// ========================================================================== //
 
 @function color ($color, $value: 500) {
     @return map-get($color, $value);

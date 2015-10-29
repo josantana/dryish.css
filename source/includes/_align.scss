@@ -1,0 +1,36 @@
+// HORIZONTAL ALIGN
+// ========================================================================== //
+
+.u-align-left {
+    text-align: left;
+}
+
+.u-align-center {
+    text-align: center;
+}
+
+.u-align-right {
+    text-align: right;
+}
+
+// VERTICAL ALIGN
+// ========================================================================== //
+
+// Depends on an appropriate `display` value.
+// Utility classes for vertically aligning elements.
+
+.u-align-baseline {
+    vertical-align: baseline;
+}
+
+.u-align-bottom {
+    vertical-align: bottom;
+}
+
+.u-align-middle {
+    vertical-align: middle;
+}
+
+.u-align-top {
+    vertical-align: top;
+}

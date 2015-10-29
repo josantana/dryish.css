@@ -1,0 +1,53 @@
+// IMAGE
+// ========================================================================== //
+
+%responsive-image {
+    display: block;
+    height: auto; // To keep aspect ratio
+    max-width: 100%; // To prevent overflow
+    overflow: hidden;
+    width: 100%;
+}
+
+.u-responsive-image { @extend %responsive-image; }
+
+// VIDEO
+// ========================================================================== //
+
+%responsive-video {
+    height: 0;
+    margin: 0; // Address margin not present on figure in IE 8/9 and Safari 5
+    overflow: hidden;
+    position: relative;
+
+    // Creates the 16:9 proportion of the video wrapper
+
+    &,
+    &.mod-widescreen {
+        padding-bottom: (9 / 16) * 100%;
+    }
+
+    // This one, the 4:3 proportion
+
+    &.mod-fullscreen {
+        padding-bottom: (3 / 4) * 100%;
+    }
+
+    // And finally, the 21:9 proportion
+
+    &.mod-ultrawide {
+        padding-bottom: (9 / 21) * 100%;
+    }
+
+    iframe,
+    object,
+    embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.u-responsive-video { @extend %responsive-video; }

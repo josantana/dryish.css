@@ -1,0 +1,120 @@
+// MEDIA QUERY HELPERS
+// ========================================================================== //
+
+.u-small-devices,
+.u-small-medium-devices,
+.u-medium-small-devices {
+    display: block !important;
+}
+
+.u-medium-devices,
+.u-large-devices,
+.u-medium-large-devices,
+.u-large-medium-devices {
+    display: none !important;
+}
+
+@media #{$break-medium} {
+    .u-small-devices,
+    .u-large-devices {
+        display: none !important;
+    }
+
+    .u-medium-devices,
+    .u-medium-large-devices,
+    .u-medium-small-devices,
+    .u-small-medium-devices,
+    .u-large-medium-devices {
+        display: block !important;
+    }
+
+    .flex {
+        &.u-medium-devices,
+        &.u-medium-large-devices,
+        &.u-medium-small-devices,
+        &.u-small-medium-devices,
+        &.u-large-medium-devices {
+            display: flex !important;
+        }
+    }
+
+    table {
+        &.u-medium-devices,
+        &.u-medium-large-devices,
+        &.u-medium-small-devices,
+        &.u-small-medium-devices,
+        &.u-large-medium-devices {
+            display: table !important;
+        }
+    }
+
+    tr {
+        &.u-medium-devices,
+        &.u-medium-large-devices,
+        &.u-medium-small-devices,
+        &.u-small-medium-devices,
+        &.u-large-medium-devices {
+            display: table-row !important;
+        }
+    }
+
+    td,
+    th {
+        &.u-medium-devices,
+        &.u-medium-large-devices,
+        &.u-medium-small-devices,
+        &.u-small-medium-devices,
+        &.u-large-medium-devices {
+            display: table-cell !important;
+        }
+    }
+}
+
+@media #{$break-large} {
+
+    .u-small-devices,
+    .u-medium-devices,
+    .u-medium-small-devices,
+    .u-small-medium-devices {
+        display: none !important;
+    }
+
+    .u-large-devices,
+    .u-medium-large-devices,
+    .u-large-medium-devices {
+        display: block !important;
+    }
+
+    .flex {
+        &.u-large-devices,
+        &.u-medium-large-devices,
+        &.u-large-medium-devices {
+            display: flex !important;
+        }
+    }
+
+    table {
+        &.u-large-devices,
+        &.u-medium-large-devices,
+        &.u-large-medium-devices {
+            display: table !important;
+        }
+    }
+
+    tr {
+        &.u-large-devices,
+        &.u-medium-large-devices,
+        &.u-large-medium-devices {
+            display: table-row !important;
+        }
+    }
+
+    td,
+    th {
+        &.u-large-devices,
+        &.u-medium-large-devices,
+        &.u-large-medium-devices {
+            display: table-cell !important;
+        }
+    }
+}
