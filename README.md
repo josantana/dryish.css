@@ -73,7 +73,7 @@ Check the list, and create a new one if not.
 ```
 
 #### State
-Prefixed with `.is-`. The state selectors manage the state of an element and the user interaction. This selector type works great with Javascript. And is the ONLY selector type where is allowed to use `!importante`. Only ONLY, ok? :rage:
+Prefixed with `.is-`. The state selectors manage the state of an element and the user interaction. This selector type works great with Javascript. And is the ONLY selector type where is allowed to use `!importante`. Only here, ok? :rage:
 
 ###### Examples
 ```
