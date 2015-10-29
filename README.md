@@ -27,7 +27,7 @@ Make individual selectors as rare and sparse as possible.
 
 Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) like when you're working with [React.js](https://facebook.github.io/react). Split elements in smaller elements. Draw boxes around every element (and its children) in the mock and give them all names accordingly to its style, not the content. Forget about classes like `.profile-card` or `.about-page-title`. Think in more reusable and simple classes like `.box` or `.big-text`. [Nicole Sullivan](http://www.stubbornella.org/content/author/nicole/) talked about this on her [article](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
 
-![Elements Split](http://s8.postimg.org/q8bj3vbr9/dryish_facebook_example.png)
+![Elements Split](http://s16.postimg.org/pksoh3yjp/dryish_elements_split.png)
 
 # Naming conventions
 
