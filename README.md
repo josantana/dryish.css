@@ -95,10 +95,6 @@ Prefixed with `.u-`. For generic helper classes.
 
 ## Implementation
 
-### Install Sass and Sass Linter
-
-*Dryish.css* is all based on Sass. The linter will help you write following the best pratices by default. Without IDs, overqualified selectors, etc.
-
 ### Install with Bower
 
 You can install and manage *Dryish.css* versions using [Bower](http://bower.io).
@@ -106,3 +102,7 @@ You can install and manage *Dryish.css* versions using [Bower](http://bower.io).
 ```
 $ bower install dryish.css
 ```
+
+### Use Sass Linter
+
+*Dryish.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
