@@ -1,0 +1,24 @@
+{
+  "name": "dryish.css",
+  "version": "0.0.2",
+  "homepage": "https://github.com/josantana/dryish.css",
+  "authors": [
+    "Jo Santana <josantana@jogalabs.com>"
+  ],
+  "description": "A CSS methodology based on DRY CSS and OOCSS, bundled with helpful selectors and a flex-based layout system.",
+  "main": "./source/dryish.scss",
+  "keywords": [
+    "css",
+    "framework",
+    "sass",
+    "flex"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
