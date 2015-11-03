@@ -1,14 +1,17 @@
 dryish.css
 ==========
 
-A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches. Bundled with helpful selectors and a super simple flex-based layout system. Fell free to use it as a start point for your front-end projects.
+A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches. Bundled with helpful selectors and a super simple flex-based layout system.
 
-# Principles of Dryish
+Fell free to use it as a start point for your front-end projects.
 
-- Design for reusability.
-- Keep style separate from content.
-- Specificity no deeper than one level. Yes, that hard. Only for modifiers (in some cases) are allowed to access level two.
-- Don't repeat yourself (DRY). Avoid it.
+### Install with Bower
+
+You can install and manage *Dryish.css* versions using [Bower](http://bower.io).
+
+```
+$ bower install dryish.css
+```
 
 ### Dryish :heart: Sass
 
@@ -19,11 +22,24 @@ A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremycla
 
 From now on, `@extend` is your best friend.
 
-### Guidelines
+### Use a Sass Linter
 
-> Why this style isn't part of a group?
+*Dryish.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
+
+===
+
+# Principles of Dryish
+
+- Design for reusability.
+- Keep style separate from content.
+- Specificity no deeper than one level. Yes, that hard. Only for modifiers (in some cases) are allowed to access level two.
+- Don't repeat yourself (DRY). Avoid it.
+
+# Guidelines
 
 Make individual selectors as rare and sparse as possible.
+
+> Why this style isn't part of a group?
 
 Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) like when you're working with [React.js](https://facebook.github.io/react). Split elements in smaller elements. Draw boxes around every element (and its children) in the mock and give them all names accordingly to its style, not the content. Forget about classes like `.profile-card` or `.about-page-title`. Think in more reusable and simple classes like `.box` or `.big-text`. [Nicole Sullivan](http://www.stubbornella.org/content/author/nicole/) talked about this on her [article](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
 
@@ -92,17 +108,3 @@ Prefixed with `.u-`. For generic helper classes.
 .u-clearfix
 .u-responsive
 ```
-
-## Implementation
-
-### Install with Bower
-
-You can install and manage *Dryish.css* versions using [Bower](http://bower.io).
-
-```
-$ bower install dryish.css
-```
-
-### Use Sass Linter
-
-*Dryish.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
