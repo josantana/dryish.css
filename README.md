@@ -26,8 +26,6 @@ From now on, `@extend` is your best friend.
 
 *Dryish.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
 
-===
-
 # Principles of Dryish
 
 - Design for reusability.
