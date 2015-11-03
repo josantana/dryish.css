@@ -1,18 +1,33 @@
 // Dryish.css
 
+// Setup
+
 @import 'includes/setup';
 @import 'includes/color-palette';
-@import 'includes/normalize';
+@import 'selectors/normalize';
+
+// Includes
 
 @import 'includes/align';
 @import 'includes/animation';
 @import 'includes/button';
-@import 'includes/emojione';
-@import 'includes/layout';
 @import 'includes/loading';
 @import 'includes/media';
-@import 'includes/media-query';
 @import 'includes/position';
 @import 'includes/shape';
 @import 'includes/state';
 @import 'includes/text';
+
+// Selectors
+
+@import 'selectors/align';
+@import 'selectors/animation';
+@import 'selectors/button';
+@import 'selectors/emojione';
+@import 'selectors/layout';
+@import 'selectors/loading';
+@import 'selectors/media';
+@import 'selectors/media-query';
+@import 'selectors/position';
+@import 'selectors/state';
+@import 'selectors/text';

@@ -1,7 +1,7 @@
 // EMOJIONE
 // ========================================================================== //
 
-.emojione {
+.u-emojione {
     display: inline-block;
     font-size: inherit;
     height: 3ex;
@@ -14,5 +14,5 @@
 }
 
 img {
-    &.emojione { width: auto; }
+    &.u-emojione { width: auto; }
 }

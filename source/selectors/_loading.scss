@@ -1,0 +1,22 @@
+// Loading
+// ========================================================================== //
+
+.u-loading--dots {
+    .u-loading--dot {
+        animation: scale-in-out 1s ease-in-out infinite;
+        background-color: color($blue-grey, 50);
+        border-radius: 32px;
+        display: block;
+        height: 32px;
+        margin: 3px;
+        width: 32px;
+
+        &:nth-child(2) {
+            animation-delay: -.9s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -.8s;
+        }
+    }
+}

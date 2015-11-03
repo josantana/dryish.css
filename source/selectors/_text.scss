@@ -1,0 +1,51 @@
+// Image replacement for background-image
+
+.u-hidden-text {
+    @extend %hidden-text;
+}
+
+// Our font-family for coding
+
+pre,
+code,
+.u-code-font {
+    @extend %code-font;
+}
+
+// Word breaking
+// Break strings when their length exceeds the width of their container.
+
+.u-text-break {
+    word-wrap: break-word;
+}
+
+// Inherit the ancestor's text color.
+
+.u-text-inherit-color {
+    color: inherit;
+}
+
+// Enables font kerning in all browsers.
+
+.u-text-kern {
+    @extend %text-kern;
+}
+
+// Prevent whitespace wrapping
+
+.u-text-nowrap {
+    white-space: nowrap;
+}
+
+// Text truncation
+// Prevent text from wrapping onto multiple lines, and truncate with an ellipsis.
+// 1. Ensure that the node has a maximum width after which truncation can occur.
+// 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor nodes.
+
+.u-text-truncate {
+    max-width: 100%; // 1
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; // 2
+}

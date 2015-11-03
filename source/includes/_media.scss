@@ -9,8 +9,6 @@
     width: 100%;
 }
 
-.u-responsive-image { @extend %responsive-image; }
-
 // VIDEO
 // ========================================================================== //
 
@@ -49,5 +47,3 @@
         width: 100%;
     }
 }
-
-.u-responsive-video { @extend %responsive-video; }

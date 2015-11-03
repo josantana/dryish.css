@@ -1,0 +1,70 @@
+// State: Based on SUITCSS
+
+// INTERACTION
+// =============================================================================
+
+.is-action {
+    @extend %is-action;
+}
+
+.is-disabled {
+    @extend %is-disabled;
+}
+
+.is-draggable {
+    @extend %is-draggable;
+}
+
+// VISIBILITY
+// =============================================================================
+
+.is-hidden {
+    @extend %is-hidden;
+}
+
+// Completely remove from the flow but leave available to screen readers
+
+.is-hidden-visually {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Display a hidden-by-default element.
+
+.is-shown {
+    @extend %is-shown;
+}
+
+table {
+    &.is-shown {
+        display: table !important;
+    }
+}
+
+tr {
+    &.is-shown {
+        display: table-row !important;
+    }
+}
+
+td,
+th {
+    &.is-shown {
+        display: table-cell !important;
+    }
+}
+
+// Control visibility without affecting flow.
+
+.is-visible {
+    @extend %is-visible;
+}
+
+.is-invisible {
+    @extend %is-invisible;
+}

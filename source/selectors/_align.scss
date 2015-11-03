@@ -1,16 +1,16 @@
 // HORIZONTAL ALIGN
 // ========================================================================== //
 
-%align-left {
-    text-align: left;
+.u-align-left {
+    @extend %align-left;
 }
 
-%align-center {
-    text-align: center;
+.u-align-center {
+    @extend %align-center;
 }
 
-%align-right {
-    text-align: right;
+.u-align-right {
+    @extend %align-right;
 }
 
 // VERTICAL ALIGN
@@ -19,18 +19,18 @@
 // Depends on an appropriate `display` value.
 // Utility classes for vertically aligning elements.
 
-%align-baseline {
-    vertical-align: baseline;
+.u-align-baseline {
+    @extend %align-baseline;
 }
 
-%align-bottom {
-    vertical-align: bottom;
+.u-align-bottom {
+    @extend %align-bottom;
 }
 
-%align-middle {
-    vertical-align: middle;
+.u-align-middle {
+    @extend %align-middle;
 }
 
-%align-top {
-    vertical-align: top;
+.u-align-top {
+    @extend %align-top;
 }
