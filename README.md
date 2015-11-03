@@ -26,7 +26,7 @@ From now on, `@extend` is your best friend.
 
 *upDRY.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
 
-# Principles of *upDRY.css*
+# Principles of upDRY
 
 - Design for reusability.
 - Keep style separate from content.
