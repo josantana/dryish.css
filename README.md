@@ -1,32 +1,32 @@
-dryish.css
-==========
+upDRY.css
+=========
 
-A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS touches. Bundled with helpful selectors and a super simple flex-based layout system.
+A CSS methodology heavily based on [DRY CSS](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) (by [Jeremy Clarke](http://simianuprising.com/)) and [OOCSS](http://www.slideshare.net/stubbornella/object-oriented-css), with some BEM and SMACSS. Bundled with helpful selectors and a super simple flex-based layout system.
 
 Fell free to use it as a start point for your front-end projects.
 
 ### Install with Bower
 
-You can install and manage *Dryish.css* versions using [Bower](http://bower.io).
+You can install and manage *upDRY.css* versions using [Bower](http://bower.io).
 
 ```
-$ bower install dryish.css
+$ bower install updry.css
 ```
 
-### Dryish :heart: Sass
+### upDRY :heart: Sass
 
-[Sass](http://sass-lang.com/) is incredible. It really gives superpowers to CSS. But we need to limit it's flight, to avoid duplication. There are two rules on *Dryish.css*, as follows:
+[Sass](http://sass-lang.com/) is incredible. It really gives superpowers to CSS. But we need to limit it's flight, to avoid duplication. There are two rules on *upDRY.css*, as follows:
 
-- No variables outsite setup files. Create a unique file selector and extend from there.
-- No mixins. They are super, but also make your compiled file super redundant.
+- Avoid variables (outsite setup files). Create a unique selector and extend from there.
+- Avoid mixins. They are super, but also make your compiled file super redundant.
 
 From now on, `@extend` is your best friend.
 
 ### Use a Sass Linter
 
-*Dryish.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
+*upDRY.css* is all based on Sass. Configure your favorite code editor to use this linter to help you write accordingly to the best pratices by default. Without IDs, overqualified selectors, and so on.
 
-# Principles of Dryish
+# Principles of *upDRY.css*
 
 - Design for reusability.
 - Keep style separate from content.
@@ -45,7 +45,7 @@ Try to [think](https://facebook.github.io/react/docs/thinking-in-react.html) lik
 
 # Naming conventions
 
-*Dryish.css* offers five types of selectors, all presented in the code below:
+*upDRY.css* offers five types of selectors, all presented in the code below:
 
 ```
 <div class="christmas-tree">
