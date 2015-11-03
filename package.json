@@ -1,14 +1,14 @@
 {
-  "name": "dryish.css",
+  "name": "updry.css",
   "description": "A CSS methodology based on DRY CSS and OOCSS, bundled with helpful selectors and a flex-based layout system.",
   "url": "http://josantana.github.io",
   "author": "Jo Santana",
   "copyright": "2015",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "license": "Released under the MIT license",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josantana/dryish.css"
+    "url": "https://github.com/josantana/updry.css"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

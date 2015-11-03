@@ -42,7 +42,7 @@ gulp.task('styles', function ()
     }))
     .pipe(sourcemaps.write('../map'))
     .pipe(gulp.dest(dist))
-    .pipe(notify('Dryish: Built'));
+    .pipe(notify('upDRY: Built'));
 });
 
 gulp.task('default', ['styles'], function ()
