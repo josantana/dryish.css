@@ -1,134 +1,66 @@
 // LAYOUT
 // ========================================================================== //
 
-.u-layout {
-    &.mod-horizontal,
-    &.mod-vertical {
-        display: flex;
+// Horizontal
 
-        &.mod-inline {
-            display: inline-flex;
-        }
+.layout-horizontal {
+    @extend %flex, %layout-alignment;
+    flex-direction: row;
+
+    &.mod-inline {
+        @extend %inline-flex;
     }
 
-    &.mod-horizontal {
-        flex-direction: row;
+    &.mod-reverse {
+        flex-direction: row-reverse;
+    }
+}
 
-        &.mod-reverse {
-            flex-direction: row-reverse;
-        }
+// Vertical
+
+.layout-vertical {
+    @extend %flex, %layout-alignment;
+    flex-direction: column;
+
+    &.mod-inline {
+        @extend %inline-flex;
     }
 
-    &.mod-vertical {
-        flex-direction: column;
-
-        &.mod-reverse {
-            flex-direction: column-reverse;
-        }
-
-        > .u-flex.mod-auto-vertical {
-            -ms-flex: 1 1 auto;
-            flex-basis: auto;
-        }
+    &.mod-reverse {
+        flex-direction: column-reverse;
     }
 
-    &.mod-wrap {
-        flex-wrap: wrap;
-
-        &.mod-reverse {
-            flex-wrap: wrap-reverse;
-        }
-    }
-
-    // alignment in cross axis
-
-    &.mod-start {
-        align-items: flex-start;
-        -ms-flex-align: start;
-    }
-
-    &.mod-center,
-    &.mod-center-center {
-        align-items: center;
-        -ms-flex-align: center;
-    }
-
-    &.mod-end {
-        align-items: flex-end;
-        -ms-flex-align: end;
-    }
-
-    // alignment in main axis
-
-    &.mod-start-justified {
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
-
-    &.mod-center-justified,
-    &.mod-center-center {
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-
-    &.mod-end-justified {
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
-
-    &.mod-around-justified {
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-    }
-
-    &.mod-justified {
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+    > .flex.mod-auto-vertical {
+        -ms-flex: 1 1 auto;
+        flex-basis: auto;
     }
 }
 
 // FLEX HELPER
 // ========================================================================== //
 
-.u-flex {
+.flex {
     -ms-flex: 1 1 .000000001px;
     flex: 1;
     flex-basis: .000000001px;
+
+    &.mod-none { flex: none; }
 
     &.mod-auto {
         -ms-flex: 1 1 auto;
         flex-basis: auto;
     }
 
-    &.mod-none { flex: none; }
-    &.mod-one { flex: 1; }
-    &.mod-two { flex: 2; }
-    &.mod-three { flex: 3; }
-    &.mod-four { flex: 4; }
-    &.mod-five { flex: 5; }
-    &.mod-six { flex: 6; }
-    &.mod-seven { flex: 7; }
-    &.mod-eight { flex: 8; }
-    &.mod-nine { flex: 9; }
-    &.mod-ten { flex: 10; }
-    &.mod-eleven { flex: 11; }
-    &.mod-twelve { flex: 12; }
-}
-
-// self alignment
-
-.mod-self-start {
-    align-self: flex-start;
-}
-
-.mod-self-center {
-    align-self: center;
-}
-
-.mod-self-end {
-    align-self: flex-end;
-}
-
-.mod-self-stretch {
-    align-self: stretch;
+    &.mod-1 { flex: 1; }
+    &.mod-2 { flex: 2; }
+    &.mod-3 { flex: 3; }
+    &.mod-4 { flex: 4; }
+    &.mod-5 { flex: 5; }
+    &.mod-6 { flex: 6; }
+    &.mod-7 { flex: 7; }
+    &.mod-8 { flex: 8; }
+    &.mod-9 { flex: 9; }
+    &.mod-10 { flex: 10; }
+    &.mod-11 { flex: 11; }
+    &.mod-12 { flex: 12; }
 }
