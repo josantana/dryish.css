@@ -2,12 +2,13 @@
 // ========================================================================== //
 
 %flat-button {
-    @extend %smooth-font;
+    @extend %smooth-font, %no-outlines, %unselectable;
     background-color: color($grey);
     border: 0;
     border-radius: 2px;
     color: color($white);
     cursor: pointer;
+    display: inline-block;
     font-family: 'Lato', sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -17,9 +18,17 @@
     padding: 0;
     position: relative;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
-    transition: all .1s linear;
     width: 100%;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+        color: color($white);
+        text-decoration: none;
+    }
 
     &.mod-green {
         background-color: color($green);
@@ -28,6 +37,7 @@
     &.mod-3d {
         box-shadow: 0 3px 0 color($grey, 600);
         transform: translateY(0);
+        transition: all .1s linear;
 
         &:active {
             box-shadow: 0 1px 0 color($grey, 500);
@@ -42,4 +52,16 @@
             box-shadow: 0 1px 0 color($green, 600);
         }
     }
+}
+
+%no-outlines {
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}
+
+%unselectable {
+    user-drag: none;
+    user-select: none;
 }
