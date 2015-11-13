@@ -1,4 +1,4 @@
 # Summary
 
-* [Language Selector](docs/LANG.md)
+* [Language Selector](docs/LANGS.md)
 
