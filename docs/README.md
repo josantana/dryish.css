@@ -3,5 +3,5 @@ upDRY.css
 
 ##### SELECT YOUR LANGUAGE
 
-- [English](EN/README.md)
-- [Português](PT/README.md)
+- [English](./en/README.md)
+- [Português](./pt/README.md)
