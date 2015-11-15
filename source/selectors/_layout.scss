@@ -10,21 +10,21 @@ layout,
     // Structure
 
     &,
-    &[mode="horizontal"],
-    &[mode="auto-vertical"] {
+    &[orientation="horizontal"],
+    &[orientation="auto-vertical"] {
         flex-direction: row;
     }
 
-    &[mode="reverse"],
-    &[mode="reverse-horizontal"] {
+    &[orientation="reverse"],
+    &[orientation="reverse-horizontal"] {
         flex-direction: row-reverse;
     }
 
-    &[mode="vertical"] {
+    &[orientation="vertical"] {
         flex-direction: column;
     }
 
-    &[mode="reverse-vertical"] {
+    &[orientation="reverse-vertical"] {
         flex-direction: column-reverse;
     }
 
@@ -59,10 +59,10 @@ layout,
 
     // Alignment
 
-    &:not([mode]),
-    &[mode="horizontal"],
-    &[mode="reverse"],
-    &[mode="reverse-horizontal"] {
+    &:not([orientation]),
+    &[orientation="horizontal"],
+    &[orientation="reverse"],
+    &[orientation="reverse-horizontal"] {
 
         // Alignment in main axis
 
@@ -99,8 +99,8 @@ layout,
         }
     }
 
-    &[mode="vertical"],
-    &[mode="reverse-vertical"] {
+    &[orientation="vertical"],
+    &[orientation="reverse-vertical"] {
 
         // Alignment in main axis
 
@@ -154,9 +154,9 @@ layout,
     &[wrap] {
         flex-wrap: wrap;
 
-        &[mode="reverse"],
-        &[mode="reverse-horizontal"],
-        &[mode="reverse-vertical"] {
+        &[orientation="reverse"],
+        &[orientation="reverse-horizontal"],
+        &[orientation="reverse-vertical"] {
             flex-wrap: wrap-reverse;
         }
     }
@@ -166,7 +166,7 @@ layout,
 
     layout,
     [layout] {
-        &[mode="auto-vertical"] {
+        &[orientation="auto-vertical"] {
             flex-direction: column;
 
             > * {
