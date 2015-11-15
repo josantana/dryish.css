@@ -25,7 +25,7 @@ var devInfo =
 ].join('\n');
 
 var dist = './dist',
-    scss = [ './source/*.scss',  './source/includes/*.scss' ];
+    scss = [ './source/*.scss',  './source/includes/*.scss',  './source/selectors/*.scss' ];
 
 gulp.task('styles', function ()
 {

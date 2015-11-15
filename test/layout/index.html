@@ -1,0 +1,188 @@
+<!doctype html>
+
+<html ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Layout</title>
+
+    <!-- Styles -->
+    <style>
+        html body {
+            color: #444;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            margin: 30px auto;
+            max-width: 728px;
+        }
+
+        layout {
+            background: #E9EAED;
+            border-radius: 3px;
+            margin: 30px 0;
+            min-height: 55px;
+            padding: 3px;
+        }
+
+        layout > * {
+            background: #fff;
+            border-radius: 2px;
+            margin: 3px;
+            padding: 12px;
+        }
+
+        [wrap] > * {
+            padding: 12px 32px;
+        }
+
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300italic,400italic,600italic,400,300,600,700,800|Open+Sans+Condensed:300,700'>
+    <link rel="stylesheet" href="../../dist/updry.css" />
+
+</head>
+
+<body>
+
+    <layout></layout>
+
+    <layout>
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+    </layout>
+
+    <layout mode="reverse">
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+    </layout>
+
+    <layout mode="vertical">
+        <row>Alpha</row>
+        <row>Beta</row>
+        <row>Charlie</row>
+    </layout>
+
+    <layout mode="reverse-vertical">
+        <row>Alpha</row>
+        <row>Beta</row>
+        <row>Charlie</row>
+    </layout>
+
+    <layout mode="auto-vertical">
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+    </layout>
+
+    <layout>
+        <column>Alpha</column>
+        <column size="flex">Beta</column>
+        <column>Charlie</column>
+    </layout>
+
+    <layout mode="vertical" style="height: 200px;">
+        <row>Alpha</row>
+        <row size="flex">Beta</row>
+        <row>Charlie</row>
+    </layout>
+
+    <layout>
+        <row size="flex">Alpha</row>
+        <row size="2">Beta</row>
+        <row size="3">Charlie</row>
+    </layout>
+
+    <layout>
+        <row size="1">Alpha</row>
+        <row size="none">Beta</row>
+        <row size="3">Charlie</row>
+    </layout>
+
+    <layout align="left" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="center" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="right" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="top" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="middle" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="bottom" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="middle center" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="bottom right" style="height: 100px;">
+        <column>Alpha</column>
+    </layout>
+
+    <layout align="spaced" style="height: 100px;">
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+    </layout>
+
+    <layout align="surrounded" style="height: 100px;">
+        <column>Alpha</column>
+        <column>Beta</column>
+    </layout>
+
+    <layout mode="vertical" align="top" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout mode="vertical" align="middle" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout mode="vertical" align="bottom" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout mode="vertical" align="left" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout mode="vertical" align="center" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout mode="vertical" align="right" style="height: 200px;">
+        <row>Alpha</row>
+    </layout>
+
+    <layout wrap style="width: 300px;">
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+        <column>Delta</column>
+    </layout>
+
+    <layout mode="reverse" wrap style="width: 300px;">
+        <column>Alpha</column>
+        <column>Beta</column>
+        <column>Charlie</column>
+        <column>Delta</column>
+    </layout>
+
+</body>
+
+</html>

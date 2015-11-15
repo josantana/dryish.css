@@ -3,64 +3,176 @@
 
 // Horizontal
 
-.layout-horizontal {
-    @extend %flex, %layout-alignment;
-    flex-direction: row;
+layout,
+[layout] {
+    @extend %flex;
 
-    &.mod-inline {
-        @extend %inline-flex;
+    // Structure
+
+    &,
+    &[mode="horizontal"],
+    &[mode="auto-vertical"] {
+        flex-direction: row;
     }
 
-    &.mod-reverse {
+    &[mode="reverse"],
+    &[mode="reverse-horizontal"] {
         flex-direction: row-reverse;
     }
-}
 
-// Vertical
-
-.layout-vertical {
-    @extend %flex, %layout-alignment;
-    flex-direction: column;
-
-    &.mod-inline {
-        @extend %inline-flex;
+    &[mode="vertical"] {
+        flex-direction: column;
     }
 
-    &.mod-reverse {
+    &[mode="reverse-vertical"] {
         flex-direction: column-reverse;
     }
 
-    > .flex.mod-auto-vertical {
-        -ms-flex: 1 1 auto;
-        flex-basis: auto;
+    // Sizing
+
+    [size="flex"] {
+        // -ms-flex: 1 1 .000000001px;
+        flex: 1;
+        flex-basis: .000000001px;
+    }
+
+    [size="none"] {
+        flex: none;
+    }
+
+    [size="auto"] {
+        @include auto-sizing;
+    }
+
+    [size="1"] { flex: 1; }
+    [size="2"] { flex: 2; }
+    [size="3"] { flex: 3; }
+    [size="4"] { flex: 4; }
+    [size="5"] { flex: 5; }
+    [size="6"] { flex: 6; }
+    [size="7"] { flex: 7; }
+    [size="8"] { flex: 8; }
+    [size="9"] { flex: 9; }
+    [size="10"] { flex: 10; }
+    [size="11"] { flex: 11; }
+    [size="12"] { flex: 12; }
+
+    // Alignment
+
+    &:not([mode]),
+    &[mode="horizontal"],
+    &[mode="reverse"],
+    &[mode="reverse-horizontal"] {
+
+        // Alignment in main axis
+
+        &[align~="left"] {
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        &[align~="center"] {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        &[align~="right"] {
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+
+        // Alignment in cross axis
+
+        &[align~="top"] {
+            align-items: flex-start;
+            -ms-flex-align: start;
+        }
+
+        &[align~="middle"] {
+            align-items: center;
+            -ms-flex-align: center;
+        }
+
+        &[align~="bottom"] {
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }
+    }
+
+    &[mode="vertical"],
+    &[mode="reverse-vertical"] {
+
+        // Alignment in main axis
+
+        &[align~="top"] {
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        &[align~="middle"] {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        &[align~="bottom"] {
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+
+        // Alignment in cross axis
+
+        &[align~="left"] {
+            align-items: flex-start;
+            -ms-flex-align: start;
+        }
+
+        &[align~="center"] {
+            align-items: center;
+            -ms-flex-align: center;
+        }
+
+        &[align~="right"] {
+            align-items: flex-end;
+            -ms-flex-align: end;
+        }
+    }
+
+    // Space Alignment
+
+    &[align~="spaced"] {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    &[align~="surrounded"] {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    // Wrap
+
+    &[wrap] {
+        flex-wrap: wrap;
+
+        &[mode="reverse"],
+        &[mode="reverse-horizontal"],
+        &[mode="reverse-vertical"] {
+            flex-wrap: wrap-reverse;
+        }
     }
 }
 
-// FLEX HELPER
-// ========================================================================== //
+@media #{$break-small} {
 
-.flex {
-    -ms-flex: 1 1 .000000001px;
-    flex: 1;
-    flex-basis: .000000001px;
+    layout,
+    [layout] {
+        &[mode="auto-vertical"] {
+            flex-direction: column;
 
-    &.mod-none { flex: none; }
-
-    &.mod-auto {
-        -ms-flex: 1 1 auto;
-        flex-basis: auto;
+            > * {
+                @include auto-sizing;
+            }
+        }
     }
 
-    &.mod-1 { flex: 1; }
-    &.mod-2 { flex: 2; }
-    &.mod-3 { flex: 3; }
-    &.mod-4 { flex: 4; }
-    &.mod-5 { flex: 5; }
-    &.mod-6 { flex: 6; }
-    &.mod-7 { flex: 7; }
-    &.mod-8 { flex: 8; }
-    &.mod-9 { flex: 9; }
-    &.mod-10 { flex: 10; }
-    &.mod-11 { flex: 11; }
-    &.mod-12 { flex: 12; }
 }
