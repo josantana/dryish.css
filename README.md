@@ -9,4 +9,6 @@ Fell free to use it as a start point for your front-end projects.
 
 ### Documentation
 
-Please, read our [documentation](https://josantana.gitbooks.io/updry/content/) for more information about how to use it in your projects.
+Please, read our [documentation](https://josantana.gitbooks.io/updry/content/) for more information about our methodology and all CSS modules bundled in our framework.
+
+*Available in English (__EN__) and Portuguese (__PT-BR__).*
