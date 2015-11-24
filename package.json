@@ -1,14 +1,26 @@
 {
   "name": "updry.css",
-  "description": "A CSS methodology based on DRY CSS and OOCSS, bundled with helpful selectors and a flex-based layout system.",
-  "url": "http://josantana.github.io",
-  "author": "Jo Santana",
-  "copyright": "2015",
-  "version": "0.4.1",
-  "license": "Released under the MIT license",
+  "version": "0.5.1",
+  "description": "A CSS methodology applied to a nonintrusive framework.",
+  "author": "Jo Santana <josantana@jogalabs.com> (http://josantana.net)",
+  "license": "MIT",
+  "main": "source/updry.scss",
+  "homepage": "https://www.gitbook.com/read/book/josantana/updry",
+  "keywords": [
+    "dry",
+    "sass",
+    "scss",
+    "oocss",
+    "css",
+    "framework",
+    "flexbox"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/josantana/updry.css"
+    "url": "git+https://github.com/josantana/updry.css"
+  },
+  "bugs": {
+    "url": "https://github.com/josantana/updry.css/issues"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

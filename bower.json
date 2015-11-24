@@ -1,24 +1,28 @@
 {
   "name": "updry.css",
   "version": "0.5.1",
-  "homepage": "https://github.com/josantana/updry.css",
+  "description": "A CSS methodology applied to a nonintrusive framework.",
   "authors": [
-    "Jo Santana <josantana@jogalabs.com>"
-  ],
-  "description": "A CSS methodology based on DRY CSS and OOCSS, bundled with helpful selectors and a flex-based layout system.",
-  "main": "./source/updry.scss",
-  "keywords": [
-    "css",
-    "framework",
-    "sass",
-    "flex"
+    "Jo Santana <josantana@jogalabs.com> (http://josantana.net)"
   ],
   "license": "MIT",
+  "main": "source/updry.scss",
+  "homepage": "https://github.com/josantana/updry.css",
+  "keywords": [
+    "dry",
+    "sass",
+    "scss",
+    "oocss",
+    "css",
+    "framework",
+    "flexbox"
+  ],
   "ignore": [
     ".*",
     "**/.*",
     "node_modules",
     "bower_components",
+    "source",
     "gulpfile.js",
     "package.json",
     "test",
