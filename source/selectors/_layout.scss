@@ -30,15 +30,6 @@ layout,
 
     // Sizing
 
-    &[limited] {
-        layout,
-        [layout] {
-            margin: 0 auto;
-            max-width: $limit;
-            width: 100%;
-        }
-    }
-
     &[size="flex"] {
         // -ms-flex: 1 1 .000000001px;
         flex: 1;
@@ -167,6 +158,20 @@ layout,
         &[orientation="reverse-horizontal"],
         &[orientation="reverse-vertical"] {
             flex-wrap: wrap-reverse;
+        }
+    }
+
+    // Limits
+
+    &[limited] {
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        layout,
+        [layout] {
+            margin: 0 auto;
+            max-width: $limit;
+            width: 100%;
         }
     }
 }
