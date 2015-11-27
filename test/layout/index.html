@@ -27,7 +27,7 @@
             padding: 3px;
         }
 
-        layout > * {
+        layout > *:not(layout) {
             background: #fff;
             border-radius: 2px;
             margin: 3px;
@@ -181,6 +181,13 @@
         <column>Beta</column>
         <column>Charlie</column>
         <column>Delta</column>
+    </layout>
+
+    <layout align="center" limited>
+        <layout>
+            <row>Alpha</row>
+            <row>Beta</row>
+        </layout>
     </layout>
 
 </body>
