@@ -30,6 +30,14 @@ layout,
 
     // Sizing
 
+    &[limited] {
+        layout,
+        [layout] {
+            margin: 0 auto;
+            max-width: $limit;
+        }
+    }
+
     &[size="flex"] {
         // -ms-flex: 1 1 .000000001px;
         flex: 1;
