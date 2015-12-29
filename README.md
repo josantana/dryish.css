@@ -1,4 +1,4 @@
-![first.css](http://i.imgur.com/oFrEmFx.png "first.css")
+![first.css](http://i.imgur.com/KlJuGSU.png "first.css")
 =========
 
 A CSS methodology applied to a nonintrusive framework.
