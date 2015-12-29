@@ -1,13 +1,13 @@
 {
-  "name": "updry.css",
-  "version": "0.5.1",
+  "name": "first",
+  "version": "0.6.0",
   "description": "A CSS methodology applied to a nonintrusive framework.",
   "authors": [
     "Jo Santana <josantana@jogalabs.com> (http://josantana.net)"
   ],
   "license": "MIT",
   "main": "source/updry.scss",
-  "homepage": "https://github.com/josantana/updry.css",
+  "homepage": "https://github.com/josantana/first",
   "keywords": [
     "dry",
     "sass",
