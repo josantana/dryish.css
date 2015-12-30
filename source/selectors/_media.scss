@@ -1,8 +1,13 @@
 // IMAGE
 // ========================================================================== //
 
-.u-responsive-image {
+img {
     @extend %responsive-image;
+}
+
+
+.u-regular-image {
+    @extend %regular-image;
 }
 
 // VIDEO
