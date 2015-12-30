@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Template: Blog</title>
+
+    <!-- Styles -->
+    <style>
+        html body {
+            color: #444;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            margin: 0 auto;
+        }
+
+        layout {
+            background: #E9EAED;
+            border-radius: 3px;
+            margin: 30px 0;
+            min-height: 55px;
+            padding: 3px;
+        }
+
+        layout > *:not(layout) {
+            background: #fff;
+            border-radius: 2px;
+            margin: 3px;
+            padding: 12px;
+        }
+
+        [wrap] > * {
+            padding: 12px 32px;
+        }
+
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300italic,400italic,600italic,400,300,600,700,800|Open+Sans+Condensed:300,700'>
+    <link rel="stylesheet" href="../../dist/first.css" />
+
+</head>
+
+<body>
+
+    <layout align="center">
+        <column>
+            <h1>Our Blog</h1>
+        </column>
+    </layout>
+
+    <layout limited>
+
+        <layout>
+            <column size="3">
+
+                <layout orientation="vertical">
+                    <row>
+                        <div class="post">
+                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+                            <img class="thumbnail" src="http://placehold.it/850x350">
+                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+                            <div class="callout">
+                                <ul class="menu simple">
+                                    <li><a href="#">Author: Mike Mikers</a></li>
+                                    <li><a href="#">Comments: 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </row>
+                    <row>
+                        <div class="post">
+                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+                            <img class="thumbnail" src="http://placehold.it/850x350">
+                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+                            <div class="callout">
+                                <ul class="menu simple">
+                                    <li><a href="#">Author: Mike Mikers</a></li>
+                                    <li><a href="#">Comments: 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </row>
+                    <row>
+                        <div class="post">
+                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+                            <img class="thumbnail" src="http://placehold.it/850x350">
+                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+                            <div class="callout">
+                                <ul class="menu simple">
+                                    <li><a href="#">Author: Mike Mikers</a></li>
+                                    <li><a href="#">Comments: 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </row>
+                    <row>
+                        <ul class="pagination" role="navigation" aria-label="Pagination">
+                            <li class="disabled">Previous</li>
+                            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                            <li><a href="#" aria-label="Page 2">2</a></li>
+                            <li><a href="#" aria-label="Page 3">3</a></li>
+                            <li><a href="#" aria-label="Page 4">4</a></li>
+                            <li class="ellipsis"></li>
+                            <li><a href="#" aria-label="Page 12">12</a></li>
+                            <li><a href="#" aria-label="Page 13">13</a></li>
+                            <li><a href="#" aria-label="Next page">Next</a></li>
+                        </ul>
+                    </row>
+                </layout>
+
+            </column>
+            <column size="1">
+
+                <h4>Categories</h4>
+
+                <ul>
+                    <li><a href="#">Skyler</a></li>
+                    <li><a href="#">Jesse</a></li>
+                    <li><a href="#">Mike</a></li>
+                    <li><a href="#">Holly</a></li>
+                </ul>
+
+                <h4>Authors</h4>
+
+                <ul>
+                    <li><a href="#">Skyler</a></li>
+                    <li><a href="#">Jesse</a></li>
+                    <li><a href="#">Mike</a></li>
+                    <li><a href="#">Holly</a></li>
+                </ul>
+
+            </column>
+        </layout>
+
+    </layout>
+
+</body>
+
+</html>
