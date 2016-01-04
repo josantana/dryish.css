@@ -1,14 +1,17 @@
 // SETUP
 // ========================================================================== //
 
-$default-font-size: 10px;
-$blockquote-border-size: 3px;
+$default-font-size: 10px !default;
+$blockquote-border-size: 3px !default;
 
 $break-small: '(max-width: 767px)' !default;
 $break-medium: '(min-width: 768px)' !default;
 $break-large: '(min-width: 1025px)' !default;
 
 $limit: 1200px !default;
+
+$horizontal-space: 5.6rem !default;
+$vertical-space: 3.6rem !default;
 
 // DO NOT modify these variables!
 // Instead, declare new values on your sass file BEFORE importing upDRY.css
