@@ -131,6 +131,14 @@ h1 {
     margin: .67rem 0;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid color($grey, 200);
+    box-sizing: content-box;
+    height: 0;
+    margin: 2rem 0;
+}
+
 // Address styling not present in IE 8/9.
 
 mark {
@@ -291,7 +299,7 @@ button {
 
     &:focus {
         outline: 1px dotted;
-        outline: 5px auto -webkit-focus-ring-color;
+        outline: .5rem auto -webkit-focus-ring-color;
     }
 }
 
