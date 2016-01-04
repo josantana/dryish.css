@@ -15,7 +15,7 @@
 // Convert pixel to rem (based on the default font size)
 
 @function to-rem($size) {
-    $rem-size: $size / 16px;
+    $rem-size: $size / $default-font-size;
     @return #{$rem-size}rem;
 }
 
