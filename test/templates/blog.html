@@ -18,7 +18,7 @@
             color: #444;
             font-family: 'Lora', serif;
             font-size: 1.6rem;
-            margin: 0 auto;
+            margin: 0 auto 3.2rem;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -31,10 +31,6 @@
             font-size: 5.6rem;
             font-weight: 100;
             margin: .25rem 0 1rem;
-        }
-
-        .post {
-            margin-bottom: 2rem;
         }
 
         .post-title {
@@ -55,6 +51,16 @@
             width: 100%;
         }
 
+        .sidebar-module {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+
+        .sidebar > * {
+            margin-bottom: 1rem !important;
+        }
+
     </style>
 
 </head>
@@ -72,10 +78,10 @@
 
     <layout limited>
 
-        <layout>
+        <layout spaced>
             <column size="3">
 
-                <layout orientation="vertical">
+                <layout orientation="vertical" spaced>
                     <row>
                         <div class="post">
                             <h3 class="post-title">Sample blog post</h3>
@@ -89,9 +95,18 @@
                                 <cite>Isaac Asimov</cite>
                             </blockquote>
                             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                            <h3>Sub-heading</h3>
                             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                            <pre><code>Example code block</code></pre>
+                            <ul class="styled">
+                                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                <li>Donec id elit non mi porta gravida at eget metus.</li>
+                                <li>Nulla vitae elit libero, a pharetra augue.</li>
+                            </ul>
+                            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                            <ol class="styled">
+                                <li>Vestibulum id ligula porta felis euismod semper.</li>
+                                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                            </ol>
                             <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
                     </row>
@@ -107,9 +122,18 @@
                                 <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                             </blockquote>
                             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                            <h3>Sub-heading</h3>
                             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                            <pre><code>Example code block</code></pre>
+                            <ul class="styled">
+                                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                <li>Donec id elit non mi porta gravida at eget metus.</li>
+                                <li>Nulla vitae elit libero, a pharetra augue.</li>
+                            </ul>
+                            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                            <ol class="styled">
+                                <li>Vestibulum id ligula porta felis euismod semper.</li>
+                                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                            </ol>
                             <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
                     </row>
@@ -125,18 +149,27 @@
                                 <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                             </blockquote>
                             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                            <h3>Sub-heading</h3>
                             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                            <pre><code>Example code block</code></pre>
+                            <ul class="styled">
+                                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                                <li>Donec id elit non mi porta gravida at eget metus.</li>
+                                <li>Nulla vitae elit libero, a pharetra augue.</li>
+                            </ul>
+                            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                            <ol class="styled">
+                                <li>Vestibulum id ligula porta felis euismod semper.</li>
+                                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                            </ol>
                             <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
                     </row>
                 </layout>
 
             </column>
-            <column size="1">
+            <column size="1" class="sidebar">
 
-                <div class="sidebar-module sidebar-module-inset">
+                <div class="sidebar-module">
                     <h4>About</h4>
                     <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
                 </div>
