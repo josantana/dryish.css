@@ -12,6 +12,43 @@ code,
     @extend %code-font;
 }
 
+// Remove default cursor behaviour
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+em,
+li,
+blockquote {
+    cursor: default;
+}
+
+// Blockquote
+
+blockquote {
+    border-left: 3px solid color($grey, 200);
+    color: color($grey, 600);
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: .5625rem 1.25rem .5625rem 1.1875rem;
+}
+
+cite {
+    color: inherit;
+    display: block;
+    font-size: .8125rem;
+
+    &::before {
+        color: inherit;
+        content: '\2014 \0020';
+    }
+}
+
 // Word breaking
 // Break strings when their length exceeds the width of their container.
 
