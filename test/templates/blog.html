@@ -8,46 +8,64 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
     <title>Template: Blog</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,600|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../dist/first.css" />
 
     <!-- Styles -->
     <style>
+
         html body {
             color: #444;
-            font-family: 'Open Sans';
+            font-family: 'Lora', serif;
             font-size: 14px;
             margin: 0 auto;
         }
 
-        layout {
-            background: #E9EAED;
-            border-radius: 3px;
-            margin: 30px 0;
-            min-height: 55px;
-            padding: 3px;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
         }
 
-        layout > *:not(layout) {
-            background: #fff;
-            border-radius: 2px;
-            margin: 3px;
-            padding: 12px;
+        .main-title {
+            font-size: 4em;
+            font-weight: 300;
+            margin: .25em 0;
         }
 
-        [wrap] > * {
-            padding: 12px 32px;
+        .post {
+            margin-bottom: 2em;
+        }
+
+        .post-title {
+            font-size: 2.5em;
+        }
+
+        .thumbnail {
+            border: solid 1px #ccc;
+            margin: 1em 0;
+            padding: 5px;
+        }
+
+        .callout {
+            background-color: #def0fc;
+            border-bottom: 1px solid rgba(0, 0, 0, .15);
+            margin: 0 0 3rem;
+            padding: 3rem;
+            width: 100%;
         }
 
     </style>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300italic,400italic,600italic,400,300,600,700,800|Open+Sans+Condensed:300,700'>
-    <link rel="stylesheet" href="../../dist/first.css" />
 
 </head>
 
 <body>
 
     <layout align="center">
-        <column>
-            <h1>Our Blog</h1>
+        <column class="callout">
+            <div>
+                <h1 class="main-title">First Blog</h1>
+                <h2>An example template of creating a blog with <em>First.css</em>.</h2>
+            </div>
         </column>
     </layout>
 
@@ -59,60 +77,85 @@
                 <layout orientation="vertical">
                     <row>
                         <div class="post">
-                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-                            <img class="thumbnail" src="http://placehold.it/850x350">
-                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-                            <div class="callout">
-                                <ul class="menu simple">
-                                    <li><a href="#">Author: Mike Mikers</a></li>
-                                    <li><a href="#">Comments: 3</a></li>
-                                </ul>
-                            </div>
+                            <h3 class="post-title">Sample blog post</h3>
+                            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                            <img class="thumbnail" src="http://placehold.it/900x350">
+                            <p>This blog post shows a few different types of content that's supported and styled with <em>First.css</em>. Basic typography, images, and code are all supported.</p>
+                            <hr>
+                            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <blockquote>
+                                Those people who think they know everything are a great annoyance to those of us who do.
+                                <cite>Isaac Asimov</cite>
+                            </blockquote>
+                            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            <h3>Sub-heading</h3>
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <pre><code>Example code block</code></pre>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
                     </row>
                     <row>
                         <div class="post">
-                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-                            <img class="thumbnail" src="http://placehold.it/850x350">
-                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-                            <div class="callout">
-                                <ul class="menu simple">
-                                    <li><a href="#">Author: Mike Mikers</a></li>
-                                    <li><a href="#">Comments: 3</a></li>
-                                </ul>
-                            </div>
+                            <h3 class="post-title">Sample blog post</h3>
+                            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                            <img class="thumbnail" src="http://placehold.it/900x350">
+                            <p>This blog post shows a few different types of content that's supported and styled with <em>First.css</em>. Basic typography, images, and code are all supported.</p>
+                            <hr>
+                            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <blockquote>
+                                <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            </blockquote>
+                            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            <h3>Sub-heading</h3>
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <pre><code>Example code block</code></pre>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
                     </row>
                     <row>
                         <div class="post">
-                            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-                            <img class="thumbnail" src="http://placehold.it/850x350">
-                            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
-                            <div class="callout">
-                                <ul class="menu simple">
-                                    <li><a href="#">Author: Mike Mikers</a></li>
-                                    <li><a href="#">Comments: 3</a></li>
-                                </ul>
-                            </div>
+                            <h3 class="post-title">Sample blog post</h3>
+                            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                            <img class="thumbnail" src="http://placehold.it/900x350">
+                            <p>This blog post shows a few different types of content that's supported and styled with <em>First.css</em>. Basic typography, images, and code are all supported.</p>
+                            <hr>
+                            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <blockquote>
+                                <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            </blockquote>
+                            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                            <h3>Sub-heading</h3>
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <pre><code>Example code block</code></pre>
+                            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
                         </div>
-                    </row>
-                    <row>
-                        <ul class="pagination" role="navigation" aria-label="Pagination">
-                            <li class="disabled">Previous</li>
-                            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-                            <li><a href="#" aria-label="Page 2">2</a></li>
-                            <li><a href="#" aria-label="Page 3">3</a></li>
-                            <li><a href="#" aria-label="Page 4">4</a></li>
-                            <li class="ellipsis"></li>
-                            <li><a href="#" aria-label="Page 12">12</a></li>
-                            <li><a href="#" aria-label="Page 13">13</a></li>
-                            <li><a href="#" aria-label="Next page">Next</a></li>
-                        </ul>
                     </row>
                 </layout>
 
             </column>
             <column size="1">
+
+                <div class="sidebar-module sidebar-module-inset">
+                    <h4>About</h4>
+                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                </div>
+
+                <h4>Archives</h4>
+
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ol>
 
                 <h4>Categories</h4>
 
@@ -131,6 +174,14 @@
                     <li><a href="#">Mike</a></li>
                     <li><a href="#">Holly</a></li>
                 </ul>
+
+                <h4>Elsewhere</h4>
+
+                <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
 
             </column>
         </layout>
