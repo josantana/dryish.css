@@ -31,7 +31,7 @@ blockquote {
 // Blockquote
 
 blockquote {
-    border-left: 3px solid color($grey, 200);
+    border-left: $blockquote-border-size solid color($grey, 200);
     color: color($grey, 600);
     line-height: 1.6;
     margin: 1rem 0;
