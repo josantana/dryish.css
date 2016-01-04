@@ -396,8 +396,10 @@ iframe {
     border: 0;
 }
 
-ol,
-ul {
+// By default, all lists are unstyled. Apply "styled" to get its default behaviour.
+
+ol:not(.styled),
+ul:not(.styled) {
     @extend %reset;
     list-style: none;
 }
