@@ -12,6 +12,13 @@
     }
 }
 
+// Convert pixel to rem (based on the default font size)
+
+@function to-rem($size) {
+    $rem-size: $size / 16px;
+    @return #{$rem-size}rem;
+}
+
 // Image replacement for background-image
 
 %hidden-text {
