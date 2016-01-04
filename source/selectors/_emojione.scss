@@ -6,9 +6,9 @@
     font-size: inherit;
     height: 3ex;
     line-height: normal;
-    margin: -.2ex .15em .2ex;
-    min-height: 20px;
-    min-width: 20px;
+    margin: -.2ex .15rem .2ex;
+    min-height: to-rem(20px);
+    min-width: to-rem(20px);
     vertical-align: middle;
     width: 3.1ex;
 }

@@ -5,11 +5,11 @@
     .u-loading--dot {
         animation: scale-in-out 1s ease-in-out infinite;
         background-color: color($blue-grey, 50);
-        border-radius: 32px;
+        border-radius: to-rem(32px);
         display: block;
-        height: 32px;
-        margin: 3px;
-        width: 32px;
+        height: 3to-rem(32px);
+        margin: to-rem(3px);
+        width: 3to-rem(32px);
 
         &:nth-child(2) {
             animation-delay: -.9s;
