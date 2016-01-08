@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Template: Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,600|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../dist/first.css" />
+
+    <!-- Styles -->
+    <style>
+
+        html body {
+            color: #444;
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            margin: 0 auto 3.2rem;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .main-title {
+            font-size: 5.6rem;
+            font-weight: 100;
+            margin: .25rem 0 1rem;
+        }
+
+        .post-title {
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .thumbnail {
+            border: solid 1px #ccc;
+            margin: 1rem 0;
+            padding: 5px;
+        }
+
+        .callout {
+            background-color: #def0fc;
+            border-bottom: 1px solid rgba(0, 0, 0, .15);
+            margin: 0 0 3rem;
+            padding: 3rem;
+            width: 100%;
+        }
+
+        .sidebar-module {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 1.5rem;
+        }
+
+        .sidebar > * {
+            margin-bottom: 1rem !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <layout align="center">
+        <column class="callout">
+            <div>
+                <h1 class="main-title">Forms</h1>
+                <h2>An example template of a form using <em>First.css</em>.</h2>
+            </div>
+        </column>
+    </layout>
+
+    <layout limited>
+
+        <layout spaced>
+            <column size="3">
+
+                <layout orientation="vertical" spaced>
+                    <row>
+                        <h3 class="post-title">Basic</h3>
+                        <form class="u-styled-form">
+                            <div>
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div>
+                                <label class="u-label" for="exampleInputPassword1">Password</label>
+                                <input type="password" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                        </form>
+                    </row>
+                    <row>
+                        <h3 class="post-title">Radio buttons</h3>
+                        <form class="u-styled-form">
+                            <div>
+                                <input name="radio-options" id="radio-0" type="radio" checked>
+                                <label for="radio-0">Regular input</label>
+                            </div>
+                            <div>
+                                <input name="radio-options" id="radio-1" type="radio" class="u-positive-status">
+                                <label for="radio-1">Positive color</label>
+                            </div>
+                            <div>
+                                <input name="radio-options" id="radio-2" type="radio" class="u-breeze-status">
+                                <label for="radio-2">Breeze color</label>
+                            </div>
+                            <div>
+                                <input name="radio-options" id="radio-3" type="radio" class="u-negative-status">
+                                <label for="radio-3">Negative color</label>
+                            </div>
+                            <div>
+                                <input name="radio-options" id="radio-4" type="radio" class="u-attention-status">
+                                <label for="radio-4">Attention Color</label>
+                            </div>
+                            <div>
+                                <input id="radio-5" type="radio" checked disabled>
+                                <label for="radio-5">Disabled input</label>
+                            </div>
+                        </form>
+                    </row>
+                    <row>
+                        <h3 class="post-title">Checkboxes</h3>
+                        <form class="u-styled-form">
+                            <div>
+                                <input id="checkbox-0" type="checkbox" checked>
+                                <label for="checkbox-0">Regular input</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-1" type="checkbox" checked disabled>
+                                <label for="checkbox-1">Disabled input</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-2" type="checkbox" class="u-icon-plus" checked>
+                                <label for="checkbox-2">Plus input</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-3" type="checkbox" class="u-icon-minus" checked>
+                                <label for="checkbox-3">Minus input</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-4" type="checkbox" class="u-icon-cross" checked>
+                                <label for="checkbox-4">Cross input</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-5" type="checkbox" class="u-positive-status" checked>
+                                <label for="checkbox-5">Positive color</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-6" type="checkbox" class="u-icon-plus u-breeze-status" checked>
+                                <label for="checkbox-6">Breeze color</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-7" type="checkbox" class="u-icon-minus u-negative-status" checked>
+                                <label for="checkbox-7">Negative color</label>
+                            </div>
+                            <div>
+                                <input id="checkbox-8" type="checkbox" class="u-icon-cross u-attention-status" checked>
+                                <label for="checkbox-8">Attention Color</label>
+                            </div>
+                        </form>
+                    </row>
+                </layout>
+
+            </column>
+            <column size="1" class="sidebar">
+
+                <h4>Topics</h4>
+
+                <ul>
+                    <li><a href="#">Basic</a></li>
+                    <li><a href="#">Radio buttons</a></li>
+                    <li><a href="#">Checkboxes</a></li>
+                </ul>
+
+            </column>
+        </layout>
+
+    </layout>
+
+</body>
+
+</html>
