@@ -1,4 +1,5 @@
 // First.css
+@charset 'UTF-8';
 
 // Setup
 
@@ -21,6 +22,7 @@
 
 // Selectors
 
+@import 'selectors/icons';
 @import 'selectors/align';
 @import 'selectors/animation';
 @import 'selectors/button';
