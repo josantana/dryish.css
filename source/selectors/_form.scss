@@ -3,9 +3,9 @@
 
 .u-styled-form {
 
-    div {
-        position: relative;
+    > div {
         margin-bottom: 1rem;
+        position: relative;
     }
 
     label {
@@ -32,7 +32,6 @@
     [type="tel"],
     [type="time"],
     [type="url"],
-    div.select,
     textarea {
         background-image: none;
         border: 1px solid color($grey, 400);
@@ -45,18 +44,71 @@
         line-height: 1.42857143;
         outline: 0;
         padding: 6px 12px;
+        position: relative;
         transition: border-color ease-in-out $default-animation-speed;
         width: 100%;
 
         &:focus {
             border-color: color($grey, 600);
         }
+
+        &[disabled],
+        [disabled] & {
+            background-color: color($grey, 300);
+        }
+    }
+
+    [data-icon] {
+        bottom: 0;
+        height: 34px;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        transition: opacity ease-in-out $default-animation-speed;
+        width: 34px;
+
+        &:before {
+            font-size: 1.25em;
+            line-height: 34px;
+        }
+    }
+
+    .has-feedback + [data-icon] {
+        opacity: 1;
+    }
+
+    input:focus + [data-icon] {
+        opacity: 0;
+    }
+
+    $size: 1em * 1.5;
+
+    &.has-feedback {
+        [type="text"],
+        [type="password"],
+        [type="date"],
+        [type="datetime"],
+        [type="datetime-local"],
+        [type="month"],
+        [type="week"],
+        [type="email"],
+        [type="number"],
+        [type="search"],
+        [type="tel"],
+        [type="time"],
+        [type="url"],
+        textarea {
+            padding-right: 2.5em;
+        }
     }
 
     $size: 1em * 1.5;
 
     [type="radio"],
-    [type="checkbox"] {
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+
         @extend %hide-element;
 
         &,
@@ -65,13 +117,13 @@
         }
 
         + label {
+            cursor: pointer;
             font-weight: normal;
             padding-left: $size * 1.5;
             position: relative;
 
             &:after,
             &:before {
-                @extend %icons;
                 color: inherit;
                 content: '';
                 display: block;
@@ -84,50 +136,78 @@
 
             &:before {
                 border: 1px solid color($grey, 400);
-                border-radius: 2px;
-                transition: border-color ease-in-out $default-animation-speed;
             }
 
             &:after {
-                line-height: 1.5;
-                opacity: 0;
-                text-align: center;
-                transform: scale(0);
                 transition: all ease-in-out $default-animation-speed;
             }
         }
+    }
 
-        &[disabled] {
-            + label:before {
-                background-color: color($grey, 300);
-            }
+    // State
+
+    [type="checkbox"] {
+
+        &:not(:checked) + label:after {
+            opacity: 0;
+            transform: scale(0) translateX(.5px);
+        }
+
+        &:checked + label:after {
+            opacity: 1;
+            transform: scale(1) translateX(.5px);
         }
     }
 
     [type="radio"] {
 
+        + label:after {
+            transform: scale(0);
+        }
+
+        &:checked + label:after {
+            transform: scale(1);
+        }
+    }
+
+    // Disabled
+
+    [type="radio"],
+    [type="checkbox"] {
+
+        &[disabled],
+        [disabled] &,
+        .disabled & {
+            + label {
+                cursor: not-allowed;
+
+                &:before {
+                    background-color: color($grey, 300);
+                }
+
+                &:after {
+                    opacity: .65;
+                }
+            }
+        }
+    }
+
+    // Checkbox
+
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+
         + label {
-            &:after,
+
             &:before {
-                border-radius: 50%;
+                border-radius: 2px;
             }
-        }
 
-        &:checked + label {
             &:after {
-                background-color: color($grey, 600);
-                content: '';
-                height: $size / 2;
-                left: $size / 4;
-                opacity: 1;
-                top: $size / 4;
-                transform: scale(1);
-                width: $size / 2;
+                content: '✔';
+                line-height: 1.65;
+                text-align: center;
             }
-        }
-
-        &[disabled]:checked + label:after {
-            opacity: .65;
         }
     }
 
@@ -137,78 +217,69 @@
 
         // Default icon
 
-        &:checked + label {
-            &:after {
-                content: 'v';
-                opacity: 1;
-                transform: scale(.9);
+        &:not(:checked),
+        &:checked {
+            + label:after {
+                @extend %icons;
+                content: '\76';
             }
         }
 
         // Extra icons
 
-        &.u-icon-plus,
-        &.u-icon-minus {
-            &:checked + label:after {
-                transform: scale(1);
-            }
-        }
+        &.u-icon-plus + label:after { content: '\2b'; }
+        &.u-icon-minus + label:after { content: '\2d'; }
 
-        &.u-icon-plus:checked + label:after { content: '+'; }
-        &.u-icon-minus:checked + label:after { content: '-'; }
-
-        &.u-icon-cross:checked + label:after {
-            content: 'x';
-            transform: scale(.75);
-        }
-
-        &[disabled]:checked + label:after {
-            opacity: .5;
+        &.u-icon-cross + label:after {
+            content: '\78';
         }
     }
 
-    // Colors
+    // Radio
 
     [type="radio"] {
+        @extend %hide-element;
 
-        &.u-positive-status:checked + label:after { background-color: color($green); }
-        &.u-breeze-status:checked + label:after { background-color: color($blue, 400); }
-        &.u-negative-status:checked + label:after { background-color: color($red, 600); }
-        &.u-attention-status:checked + label:after { background-color: color($orange); }
-    }
+        + label {
+            &:after,
+            &:before {
+                border-radius: 50%;
+            }
 
-    [type="checkbox"] {
-
-        &.u-positive-status:checked + label:before {
-            background-color: color($green);
-            border-color: color($green, 600);
-        }
-
-        &.u-breeze-status:checked + label:before {
-            background-color: color($blue, 400);
-            border-color: color($blue);
-        }
-
-        &.u-negative-status:checked + label:before {
-            background-color: color($red, 600);
-            border-color: color($red, 700);
-        }
-
-        &.u-attention-status:checked + label:before {
-            background-color: color($orange);
-            border-color: color($orange, 600);
-        }
-
-        &.u-positive-status:checked,
-        &.u-breeze-status:checked ,
-        &.u-negative-status:checked,
-        &.u-attention-status {
-
-            + label:after {
-                color: color($white);
+            &:after {
+                background-color: color($grey, 600);
+                content: '';
+                height: $size / 2;
+                left: $size / 4;
+                top: $size / 4;
+                width: $size / 2;
             }
         }
+
+        // &:checked + label {
+        //     &:after {
+        //         background-color: color($grey, 600);
+        //         content: '';
+        //         height: $size / 2;
+        //         left: $size / 4;
+        //         opacity: 1;
+        //         top: $size / 4;
+        //         width: $size / 2;
+        //     }
+        // }
     }
+}
+
+.mod-success {
+    color: color($green);
+}
+
+.mod-warning {
+    color: color($orange);
+}
+
+.mod-error {
+    color: color($red, 600);
 }
 
 // [type="radio"].standard:checked + label:after,

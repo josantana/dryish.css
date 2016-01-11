@@ -6,3 +6,46 @@
 %icons {
     font-family: 'first-icons', serif;
 }
+
+[data-icon]:before {
+    @extend %icons, %smooth-font;
+    content: attr(data-icon);
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+}
+
+[data-icon="cross"]:before {
+    content: '\78';
+}
+
+[data-icon="checkmark"]:before {
+    content: '\76';
+}
+
+[data-icon="minus"]:before {
+    content: '\2d';
+}
+
+[data-icon="plus"]:before {
+    content: '\2b';
+}
+
+[data-icon="asterisk2"]:before {
+    content: '\2a';
+}
+
+[data-icon="attention"]:before {
+    content: '\21';
+}
+
+[data-icon="asterisk"]:before {
+    content: '\38';
+}
+
+[data-icon="loading"]:before {
+    content: '\6c';
+}
