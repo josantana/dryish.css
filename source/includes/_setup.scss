@@ -4,7 +4,9 @@
 $default-font-size: 10px !default;
 $blockquote-border-size: 3px !default;
 
-$default-animation-speed: .25s;
+$fast-speed: .25s;
+$regular-speed: .4s;
+$slow-speed: .8s;
 
 $break-small: '(max-width: 767px)' !default;
 $break-medium: '(min-width: 768px)' !default;
