@@ -87,16 +87,12 @@
                         <h3 class="post-title">Basic</h3>
                         <form class="u-styled-form">
                             <div>
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" id="exampleInputEmail1" placeholder="Email">
+                                <label for="disabled-input">Disabled input</label>
+                                <input type="email" id="disabled-input" placeholder="Disabled input" disabled>
                             </div>
                             <div>
-                                <label class="u-label" for="exampleInputPassword1">Password</label>
-                                <input type="password" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div>
-                                <label for="exampleInputEmail1">Disabled input</label>
-                                <input type="email" id="exampleInputEmail1" placeholder="Email" disabled>
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" placeholder="Email">
                             </div>
                         </form>
                     </row>
@@ -174,6 +170,37 @@
                             </div>
                         </form>
                     </row>
+                    <row>
+                        <h3 class="post-title">Password Visibility</h3>
+                        <form class="u-styled-form">
+                            <div class="password-visibility">
+
+                                <input id="password-visibility" type="checkbox">
+                                <label for="password-visibility">
+                                    <span>Show</span> <span>Hide</span> Password
+                                </label>
+
+                                <label for="custom-password">Password</label>
+                                <input type="password" id="custom-password" placeholder="••••••••">
+                                <input type="text" placeholder="password">
+
+                                <script>
+
+                                    // Clone password value to both text/password inputs
+
+                                    [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (active) {
+                                        active.addEventListener('keyup', function () {
+                                            [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (input) {
+                                                input.value = active.value;
+                                            });
+                                        });
+                                    });
+
+                                </script>
+
+                            </div>
+                        </form>
+                    </row>
                 </layout>
 
             </column>
@@ -186,6 +213,7 @@
                     <li><a href="#">Radio buttons</a></li>
                     <li><a href="#">Checkboxes</a></li>
                     <li><a href="#">Validation with Feedback Icons</a></li>
+                    <li><a href="#">Password Visibility</a></li>
                 </ul>
 
             </column>
