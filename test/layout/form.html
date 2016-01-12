@@ -1,0 +1,184 @@
+<!doctype html>
+
+<html ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>Layout</title>
+
+    <!-- Styles -->
+    <style>
+
+        html body {
+            color: #444;
+            font-family: 'Open Sans';
+            font-size: 1.6rem;
+            margin: 3.2rem auto;
+            max-width: 728px;
+        }
+
+        .topic-title {
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+        }
+
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300italic,400italic,600italic,400,300,600,700,800|Open+Sans+Condensed:300,700'>
+    <link rel="stylesheet" href="../../dist/first.css" />
+
+</head>
+
+<body>
+
+    <layout orientation="vertical" spaced>
+        <row id="basic-input">
+            <h3 class="topic-title">Basic</h3>
+            <form class="u-styled-form">
+                <div>
+                    <label for="disabled-input">Disabled input</label>
+                    <input type="email" id="disabled-input" placeholder="Disabled input" disabled>
+                </div>
+                <div>
+                    <label for="email">Regular input</label>
+                    <input type="email" id="email" placeholder="Regular input">
+                </div>
+            </form>
+        </row>
+        <row id="radio-buttons">
+            <h3 class="topic-title">Radio buttons</h3>
+            <form class="u-styled-form">
+                <div>
+                    <input name="fake-options" id="radio-1" type="radio" disabled>
+                    <label for="radio-1">Disabled input</label>
+                </div>
+                <div>
+                    <input name="fake-options" id="radio-2" type="radio" checked disabled>
+                    <label for="radio-2">Disabled checked input</label>
+                </div>
+                <div>
+                    <input name="radio-options" id="radio-3" type="radio" checked>
+                    <label for="radio-3">Regular input</label>
+                </div>
+                <div>
+                    <input name="radio-options" id="radio-4" type="radio">
+                    <label for="radio-4">Regular input</label>
+                </div>
+                <div>
+                    <input name="radio-options" id="radio-5" type="radio">
+                    <label for="radio-5">Regular input</label>
+                </div>
+            </form>
+        </row>
+        <row id="checkboxes">
+            <h3 class="topic-title">Checkboxes</h3>
+            <form class="u-styled-form">
+                <div>
+                    <input id="checkbox-1" type="checkbox" disabled>
+                    <label for="checkbox-1">Disabled input</label>
+                </div>
+                <div>
+                    <input id="checkbox-1" type="checkbox" checked disabled>
+                    <label for="checkbox-1">Disabled checked input</label>
+                </div>
+                <div>
+                    <input id="checkbox-0" type="checkbox" checked>
+                    <label for="checkbox-0">Regular input</label>
+                </div>
+                <div>
+                    <input id="checkbox-2" type="checkbox" class="u-icon-plus" checked>
+                    <label for="checkbox-2">Plus input</label>
+                </div>
+                <div>
+                    <input id="checkbox-3" type="checkbox" class="u-icon-minus" checked>
+                    <label for="checkbox-3">Minus input</label>
+                </div>
+                <div>
+                    <input id="checkbox-4" type="checkbox" class="u-icon-cross" checked>
+                    <label for="checkbox-4">Cross input</label>
+                </div>
+            </form>
+        </row>
+        <row id="toggle-switch">
+            <h3 class="topic-title">Switch</h3>
+            <form class="u-styled-form">
+                <div>
+                    <input id="switch-1" type="checkbox" class="input-switch">
+                    <label for="switch-1">Toggle switch</label>
+                </div>
+                <div>
+                    <input id="switch-2" type="checkbox" class="input-switch" checked>
+                    <label for="switch-2">Toggle switch</label>
+                </div>
+                <div>
+                    <input id="switch-3" type="checkbox" class="input-switch" checked disabled>
+                    <label for="switch-3">Disabled toggle switch</label>
+                </div>
+                <div>
+                    <input id="switch-4" type="checkbox" class="input-switch" disabled>
+                    <label for="switch-4">Disabled toggle switch</label>
+                </div>
+                <div>
+                    <input id="switch-5" type="checkbox" class="input-switch mod-right">
+                    <label for="switch-5">Toggle switch on right</label>
+                </div>
+            </form>
+        </row>
+        <row id="validation">
+            <h3 class="topic-title">Validation with feedback icons</h3>
+            <form class="u-styled-form">
+                <div>
+                    <label for="exampleInputEmail1">Input with success</label>
+                    <input type="email" id="exampleInputEmail1" placeholder="Input with success" class="has-feedback">
+                    <span data-icon="checkmark" class="input-validation mod-success"></span>
+                </div>
+                <div>
+                    <label for="exampleInputEmail1">Input with warning</label>
+                    <input type="email" id="exampleInputEmail1" placeholder="Input with warning" class="has-feedback">
+                    <span data-icon="attention" class="input-validation mod-warning"></span>
+                </div>
+                <div>
+                    <label for="exampleInputEmail1">Input with error</label>
+                    <input type="email" id="exampleInputEmail1" placeholder="Input with error" class="has-feedback">
+                    <span data-icon="cross" class="input-validation mod-error"></span>
+                </div>
+            </form>
+        </row>
+        <row id="password">
+            <h3 class="topic-title">Password visibility</h3>
+            <form class="u-styled-form">
+                <div class="password-visibility">
+
+                    <input id="password-visibility" type="checkbox">
+                    <label for="password-visibility">
+                        <span>Show</span> <span>Hide</span> password
+                    </label>
+
+                    <label for="custom-password">Password</label>
+                    <input type="password" id="custom-password" placeholder="••••••••">
+                    <input type="text" placeholder="password">
+
+                    <script>
+
+                        // Clone password value to both text/password inputs
+
+                        [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (active) {
+                            active.addEventListener('keyup', function () {
+                                [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (input) {
+                                    input.value = active.value;
+                                });
+                            });
+                        });
+
+                    </script>
+
+                </div>
+            </form>
+        </row>
+    </layout>
+
+</body>
+
+</html>
