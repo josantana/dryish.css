@@ -34,16 +34,12 @@
     content: '\2b';
 }
 
-[data-icon="asterisk2"]:before {
+[data-icon="asterisk"]:before {
     content: '\2a';
 }
 
 [data-icon="attention"]:before {
     content: '\21';
-}
-
-[data-icon="asterisk"]:before {
-    content: '\38';
 }
 
 [data-icon="loading"]:before {

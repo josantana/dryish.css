@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-    <title>Layout</title>
+    <title>Fundamental elements: Forms</title>
 
     <!-- Styles -->
     <style>
@@ -51,23 +51,23 @@
             <h3 class="topic-title">Radio buttons</h3>
             <form class="u-styled-form">
                 <div>
-                    <input name="fake-options" id="radio-1" type="radio" disabled>
+                    <input type="radio" name="fake-options" id="radio-1" disabled>
                     <label for="radio-1">Disabled input</label>
                 </div>
                 <div>
-                    <input name="fake-options" id="radio-2" type="radio" checked disabled>
+                    <input type="radio" name="fake-options" id="radio-2" checked disabled>
                     <label for="radio-2">Disabled checked input</label>
                 </div>
                 <div>
-                    <input name="radio-options" id="radio-3" type="radio" checked>
+                    <input type="radio" name="radio-options" id="radio-3" checked>
                     <label for="radio-3">Regular input</label>
                 </div>
                 <div>
-                    <input name="radio-options" id="radio-4" type="radio">
+                    <input type="radio" name="radio-options" id="radio-4">
                     <label for="radio-4">Regular input</label>
                 </div>
                 <div>
-                    <input name="radio-options" id="radio-5" type="radio">
+                    <input type="radio" name="radio-options" id="radio-5">
                     <label for="radio-5">Regular input</label>
                 </div>
             </form>
@@ -76,28 +76,28 @@
             <h3 class="topic-title">Checkboxes</h3>
             <form class="u-styled-form">
                 <div>
-                    <input id="checkbox-1" type="checkbox" disabled>
+                    <input type="checkbox" id="checkbox-1" disabled>
                     <label for="checkbox-1">Disabled input</label>
                 </div>
                 <div>
-                    <input id="checkbox-1" type="checkbox" checked disabled>
-                    <label for="checkbox-1">Disabled checked input</label>
+                    <input type="checkbox" id="checkbox-2" checked disabled>
+                    <label for="checkbox-2">Disabled checked input</label>
                 </div>
                 <div>
-                    <input id="checkbox-0" type="checkbox" checked>
-                    <label for="checkbox-0">Regular input</label>
+                    <input type="checkbox" id="checkbox-3" checked>
+                    <label for="checkbox-3">Regular input</label>
                 </div>
                 <div>
-                    <input id="checkbox-2" type="checkbox" class="u-icon-plus" checked>
-                    <label for="checkbox-2">Plus input</label>
+                    <input type="checkbox" id="checkbox-4" class="mod-plus" checked>
+                    <label for="checkbox-4">Plus input</label>
                 </div>
                 <div>
-                    <input id="checkbox-3" type="checkbox" class="u-icon-minus" checked>
-                    <label for="checkbox-3">Minus input</label>
+                    <input type="checkbox" id="checkbox-5" class="mod-minus" checked>
+                    <label for="checkbox-5">Minus input</label>
                 </div>
                 <div>
-                    <input id="checkbox-4" type="checkbox" class="u-icon-cross" checked>
-                    <label for="checkbox-4">Cross input</label>
+                    <input type="checkbox" id="checkbox-6" class="mod-cross" checked>
+                    <label for="checkbox-6">Cross input</label>
                 </div>
             </form>
         </row>
@@ -105,23 +105,23 @@
             <h3 class="topic-title">Switch</h3>
             <form class="u-styled-form">
                 <div>
-                    <input id="switch-1" type="checkbox" class="input-switch">
+                    <input type="checkbox" id="switch-1" class="u-input-switch">
                     <label for="switch-1">Toggle switch</label>
                 </div>
                 <div>
-                    <input id="switch-2" type="checkbox" class="input-switch" checked>
+                    <input type="checkbox" id="switch-2" class="u-input-switch" checked>
                     <label for="switch-2">Toggle switch</label>
                 </div>
                 <div>
-                    <input id="switch-3" type="checkbox" class="input-switch" checked disabled>
+                    <input type="checkbox" id="switch-3" class="u-input-switch" checked disabled>
                     <label for="switch-3">Disabled toggle switch</label>
                 </div>
                 <div>
-                    <input id="switch-4" type="checkbox" class="input-switch" disabled>
+                    <input type="checkbox" id="switch-4" class="u-input-switch" disabled>
                     <label for="switch-4">Disabled toggle switch</label>
                 </div>
                 <div>
-                    <input id="switch-5" type="checkbox" class="input-switch mod-right">
+                    <input type="checkbox" id="switch-5" class="u-input-switch mod-right">
                     <label for="switch-5">Toggle switch on right</label>
                 </div>
             </form>
@@ -130,18 +130,23 @@
             <h3 class="topic-title">Validation with feedback icons</h3>
             <form class="u-styled-form">
                 <div>
-                    <label for="exampleInputEmail1">Input with success</label>
-                    <input type="email" id="exampleInputEmail1" placeholder="Input with success" class="has-feedback">
+                    <label for="validation-1">Required Input</label>
+                    <input type="text" id="validation-1" placeholder="Required Input" class="has-feedback">
+                    <span data-icon="asterisk" class="input-validation mod-required"></span>
+                </div>
+                <div>
+                    <label for="validation-2">Input with success</label>
+                    <input type="text" id="validation-2" placeholder="Input with success" class="has-feedback">
                     <span data-icon="checkmark" class="input-validation mod-success"></span>
                 </div>
                 <div>
-                    <label for="exampleInputEmail1">Input with warning</label>
-                    <input type="email" id="exampleInputEmail1" placeholder="Input with warning" class="has-feedback">
+                    <label for="validation-3">Input with warning</label>
+                    <input type="text" id="validation-3" placeholder="Input with warning" class="has-feedback">
                     <span data-icon="attention" class="input-validation mod-warning"></span>
                 </div>
                 <div>
-                    <label for="exampleInputEmail1">Input with error</label>
-                    <input type="email" id="exampleInputEmail1" placeholder="Input with error" class="has-feedback">
+                    <label for="validation-4">Input with error</label>
+                    <input type="text" id="validation-4" placeholder="Input with error" class="has-feedback">
                     <span data-icon="cross" class="input-validation mod-error"></span>
                 </div>
             </form>
@@ -151,7 +156,7 @@
             <form class="u-styled-form">
                 <div class="password-visibility">
 
-                    <input id="password-visibility" type="checkbox">
+                    <input type="checkbox" id="password-visibility">
                     <label for="password-visibility">
                         <span>Show</span> <span>Hide</span> password
                     </label>
