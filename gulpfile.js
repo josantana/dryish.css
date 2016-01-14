@@ -42,7 +42,7 @@ gulp.task('styles', function ()
     }))
     .pipe(sourcemaps.write('../map'))
     .pipe(gulp.dest(dist))
-    .pipe(notify('first: Built'));
+    .pipe(notify({ message: 'first: Built', onLast: true }));
 });
 
 gulp.task('default', ['styles'], function ()
