@@ -13,25 +13,25 @@ layout,
     &,
     &[orientation="horizontal"],
     &[orientation="auto-vertical"],
-    .layout-horizontal,
-    .layout-auto-vertical {
+    &.layout-horizontal,
+    &.layout-auto-vertical {
         flex-direction: row;
     }
 
     &[orientation="reverse"],
     &[orientation="reverse-horizontal"],
-    .layout-reverse,
-    .layout-reverse-horizontal {
+    &.layout-reverse,
+    &.layout-reverse-horizontal {
         flex-direction: row-reverse;
     }
 
     &[orientation="vertical"],
-    .layout-vertical {
+    &.layout-vertical {
         flex-direction: column;
     }
 
     &[orientation="reverse-vertical"],
-    .layout-reverse-vertical {
+    &.layout-reverse-vertical {
         flex-direction: column-reverse;
     }
 
