@@ -105,23 +105,23 @@
             <h3 class="topic-title">Switch</h3>
             <form class="u-styled-form">
                 <div>
-                    <input type="checkbox" id="switch-1" class="u-input-switch">
+                    <input type="checkbox" id="switch-1" class="input-switch">
                     <label for="switch-1">Toggle switch</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="switch-2" class="u-input-switch" checked>
+                    <input type="checkbox" id="switch-2" class="input-switch" checked>
                     <label for="switch-2">Toggle switch</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="switch-3" class="u-input-switch" checked disabled>
+                    <input type="checkbox" id="switch-3" class="input-switch" checked disabled>
                     <label for="switch-3">Disabled toggle switch</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="switch-4" class="u-input-switch" disabled>
+                    <input type="checkbox" id="switch-4" class="input-switch" disabled>
                     <label for="switch-4">Disabled toggle switch</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="switch-5" class="u-input-switch mod-right">
+                    <input type="checkbox" id="switch-5" class="input-switch mod-right">
                     <label for="switch-5">Toggle switch on right</label>
                 </div>
             </form>
@@ -182,8 +182,57 @@
                 </div>
             </form>
         </row>
+        <row id="tagging">
+            <h3 class="topic-title">Tagging</h3>
+            <form class="u-styled-form">
+                <div>
+                    <label for="tagging-input">Tags</label>
+                    <input type="text" id="tagging-input">
+                </div>
+            </form>
+        </row>
+        <row id="select">
+            <h3 class="topic-title">Single Item Select</h3>
+            <form class="u-styled-form">
+                <div class="control-group">
+                    <label for="select-beast">Beast:</label>
+                    <select id="select-beast" class="demo-default" placeholder="Select a person...">
+                        <option value="">Select a person...</option>
+                        <option value="4">Thomas Edison</option>
+                        <option value="1">Nikola</option>
+                        <option value="3">Nikola Tesla</option>
+                        <option value="5">Arnold Schwarzenegger</option>
+                    </select>
+                </div>
+            </form>
+        </row>
     </layout>
 
-</body>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../../bower_components/selectize/dist/js/standalone/selectize.js"></script>
+    <script>
 
+        $('#tagging-input').selectize({
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            }
+        });
+
+        $('#select-beast').selectize({
+            create: true,
+            sortField: {
+                field: 'text',
+                direction: 'asc'
+            },
+            dropdownParent: 'body'
+        });
+
+    </script>
+
+</body>
 </html>

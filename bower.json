@@ -26,5 +26,8 @@
     "package.json",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "selectize": "~0.12.1"
+  }
 }
