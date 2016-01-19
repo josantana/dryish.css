@@ -12,9 +12,11 @@
 @import 'includes/align';
 @import 'includes/animation';
 @import 'includes/button';
+@import 'includes/form';
 @import 'includes/layout';
 @import 'includes/loading';
 @import 'includes/media';
+@import 'includes/normalize';
 @import 'includes/position';
 @import 'includes/shape';
 @import 'includes/state';
@@ -28,6 +30,7 @@
 @import 'selectors/button';
 @import 'selectors/emojione';
 @import 'selectors/form';
+@import 'selectors/form/setup';
 @import 'selectors/form/selectize';
 @import 'selectors/layout';
 @import 'selectors/loading';

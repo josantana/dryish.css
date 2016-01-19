@@ -414,27 +414,5 @@ ul:not(.styled) {
 // HELPERS
 // ========================================================================== //
 
-// Clearfix: For clearing floats like a boss
-
-%clearfix {
-    zoom: 1;
-
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-}
-
 .u-clearfix { @extend %clearfix; }
-
-%reset {
-    margin: 0;
-    padding: 0;
-}
-
 .u-reset { @extend %reset; }

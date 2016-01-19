@@ -5,16 +5,16 @@
     @return map-get($color, $value);
 }
 
+$transparent: (
+    500: transparent
+);
+
 $white: (
     500: #fff
 );
 
 $black: (
     500: #000
-);
-
-$polishop: (
-    500: #ed141b
 );
 
 $red: (

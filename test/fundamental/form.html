@@ -167,14 +167,28 @@
 
                     <script>
 
+                        var passwordGroup = document.querySelector('.password-visibility'),
+                            passwordInputs = passwordGroup.querySelectorAll(':not([type="checkbox"])'),
+                            passwordSwitcher = passwordGroup.querySelector('[type="checkbox"]');
+
                         // Clone password value to both text/password inputs
 
-                        [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (active) {
+                        [].forEach.call(passwordInputs, function (active) {
                             active.addEventListener('keyup', function () {
-                                [].forEach.call(document.querySelectorAll('.password-visibility :not([type="checkbox"])'), function (input) {
+                                [].forEach.call(passwordInputs, function (input) {
                                     input.value = active.value;
                                 });
                             });
+                        });
+
+                        // Set focus
+
+                        passwordSwitcher.addEventListener('click', function () {
+                            if (passwordSwitcher.checked) {
+                                passwordGroup.querySelector('[type="text"]').focus();
+                            } else {
+                                passwordGroup.querySelector('[type="password"]').focus();
+                            }
                         });
 
                     </script>
@@ -186,33 +200,83 @@
             <h3 class="topic-title">Tagging</h3>
             <form class="u-styled-form">
                 <div>
-                    <label for="tagging-input">Tags</label>
-                    <input type="text" id="tagging-input">
+                    <label for="tagging-1">Tags</label>
+                    <input type="text" id="tagging-1">
+                </div>
+                <div>
+                    <label for="tagging-2">Tags with remove button</label>
+                    <input type="text" id="tagging-2">
+                </div>
+                <div>
+                    <label for="tagging-3">Draggable tags</label>
+                    <input type="text" id="tagging-3" value="powerful,you have become,the dark side,I sense,in you">
+                </div>
+                <div>
+                    <label for="tagging-4">Disabbled tags</label>
+                    <input type="text" id="tagging-4" value="hasta,la,vista" disabled>
                 </div>
             </form>
         </row>
         <row id="select">
-            <h3 class="topic-title">Single Item Select</h3>
+            <h3 class="topic-title">Dropdown</h3>
             <form class="u-styled-form">
-                <div class="control-group">
-                    <label for="select-beast">Beast:</label>
-                    <select id="select-beast" class="demo-default" placeholder="Select a person...">
-                        <option value="">Select a person...</option>
-                        <option value="4">Thomas Edison</option>
-                        <option value="1">Nikola</option>
-                        <option value="3">Nikola Tesla</option>
-                        <option value="5">Arnold Schwarzenegger</option>
-                    </select>
-                </div>
+                <label for="select-1">Dropdown:</label>
+                <select id="select-1" class="demo-default" placeholder="Select a person...">
+                    <option value="">Select a person...</option>
+                    <option value="4">Thomas Edison</option>
+                    <option value="1">Nikola</option>
+                    <option value="3">Nikola Tesla</option>
+                    <option value="5">Arnold Schwarzenegger</option>
+                </select>
+            </form>
+            <form class="u-styled-form">
+                <label for="select-2">Dropdown with option groups:</label>
+                <select id="select-2" class="demo-default" placeholder="Select gear...">
+                    <option value="">Select gear...</option>
+                    <optgroup label="Climbing">
+                        <option value="pitons">Pitons</option>
+                        <option value="cams">Cams</option>
+                        <option value="nuts">Nuts</option>
+                        <option value="bolts">Bolts</option>
+                        <option value="stoppers">Stoppers</option>
+                        <option value="sling">Sling</option>
+                    </optgroup>
+                    <optgroup label="Skiing">
+                        <option value="skis">Skis</option>
+                        <option value="skins">Skins</option>
+                        <option value="poles">Poles</option>
+                    </optgroup>
+                </select>
+            </form>
+            <form class="u-styled-form">
+                <label for="select-3">Dropdown with multiple selections:</label>
+                <select id="select-3" class="demo-default" multiple placeholder="Select a person...">
+                    <option value="">Select a person...</option>
+                    <option value="4">Thomas Edison</option>
+                    <option value="1">Nikola</option>
+                    <option value="3">Nikola Tesla</option>
+                    <option value="5">Arnold Schwarzenegger</option>
+                </select>
+            </form>
+            <form class="u-styled-form">
+                <label for="select-4">Disabled dropdown:</label>
+                <select id="select-4" class="demo-default" disabled placeholder="Select a person...">
+                    <option value="">Select a person...</option>
+                    <option value="4" checked>Thomas Edison</option>
+                    <option value="1">Nikola</option>
+                    <option value="3">Nikola Tesla</option>
+                    <option value="5">Arnold Schwarzenegger</option>
+                </select>
             </form>
         </row>
     </layout>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
     <script src="../../bower_components/selectize/dist/js/standalone/selectize.js"></script>
     <script>
 
-        $('#tagging-input').selectize({
+        $('#tagging-1').selectize({
             delimiter: ',',
             persist: false,
             create: function (input) {
@@ -223,13 +287,68 @@
             }
         });
 
-        $('#select-beast').selectize({
+        $('#tagging-2').selectize({
+            plugins: ['remove_button'],
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            }
+        });
+
+        $('#tagging-3').selectize({
+            plugins: ['drag_drop'],
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            }
+        });
+
+        $('#tagging-4').selectize({
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            }
+        });
+
+        $('#select-1').selectize({
             create: true,
             sortField: {
                 field: 'text',
                 direction: 'asc'
             },
             dropdownParent: 'body'
+        });
+
+        $('#select-2').selectize({
+            sortField: {
+                field: 'text'
+            }
+        });
+
+        $('#select-3').selectize({
+            create: true,
+            maxItems: 3,
+            sortField: {
+                field: 'text'
+            }
+        });
+
+        $('#select-4').selectize({
+            sortField: {
+                field: 'text'
+            }
         });
 
     </script>

@@ -15,8 +15,11 @@
         max-width: 100%;
     }
 
-    [disabled] {
-        cursor: not-allowed;
+    [disabled],
+    [disabled] *,
+    .disabled,
+    .disabled * {
+        cursor: not-allowed !important;
     }
 
     $input-size: 1em * 2.5;
@@ -35,45 +38,23 @@
     [type="time"],
     [type="url"],
     textarea {
-        background-image: none;
-        border: 1px solid color($grey, 400);
-        border-radius: 2px;
-        box-shadow: inset 0 1px 2px rgba(color($black), 0);
-        color: inherit;
-        display: block;
-        font-family: inherit;
-        font-size: 1.5rem;
-        line-height: 1.65;
-        outline: 0;
-        padding: 6px 12px;
-        position: relative;
-        transition: all ease-in-out $fast-speed;
-        width: 100%;
-
-        &:focus {
-            border-color: color($grey, 600);
-            box-shadow: inset 0 1px 2px rgba(color($black), .125);
-        }
-
-        &[disabled],
-        [disabled] & {
-            background-color: color($grey, 300);
-        }
+        @extend %input;
     }
 
     [data-icon] {
         bottom: 0;
-        height: 34px;
+        height: 36px;
         opacity: 1;
         position: absolute;
         right: 0;
         text-align: center;
         transition: opacity ease-in-out $fast-speed;
-        width: 34px;
+        width: 36px;
+        z-index: 2;
 
         &:before {
             font-size: 1.25em;
-            line-height: 34px;
+            line-height: 36px;
         }
     }
 
@@ -353,7 +334,7 @@
 
     .password-visibility [type="text"] {
         @extend %code-font;
-        letter-spacing: .6rem;
+        letter-spacing: .55rem;
     }
 
     .password-visibility [type="checkbox"] {

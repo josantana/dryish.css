@@ -1,0 +1,66 @@
+// Selectize Setup Variables
+
+$selectize-font-family: inherit;
+$selectize-font-smoothing: inherit;
+$selectize-font-size: 13px;
+$selectize-line-height: 18px;
+
+$selectize-text-color: #303030;
+$selectize-border-color: #d0d0d0;
+$selectize-color-highlight: rgba(125, 168, 208, .2);
+$selectize-color-input: #fff;
+$selectize-color-input-full: $selectize-color-input;
+$selectize-color-disabled: #fafafa;
+$selectize-color-dropdown: #fff;
+$selectize-dropdown-border-color: $selectize-border-color;
+
+$selectize-color-optgroup: $selectize-color-dropdown;
+$selectize-color-optgroup-text: $selectize-text-color;
+$selectize-lighten-disabled-item: 30%;
+$selectize-lighten-disabled-item-text: 30%;
+$selectize-lighten-disabled-item-border: 30%;
+$selectize-opacity-disabled: .5;
+
+$selectize-shadow-input: inset 0 1px 1px rgba(color($black), .1);
+$selectize-shadow-input-focus: inset 0 1px 2px rgba(color($black), .15);
+$selectize-border: 1px solid $selectize-border-color;
+$selectize-dropdown-border: 1px solid $selectize-dropdown-border-color;
+$selectize-border-radius: 3px;
+
+$selectize-max-height-dropdown: 200px;
+$selectize-padding-x: 8px;
+$selectize-padding-y: 8px;
+$selectize-padding-dropdown-item-x: $selectize-padding-x;
+$selectize-padding-dropdown-item-y: 5px;
+$selectize-arrow-size: 5px;
+$selectize-arrow-color: #808080;
+$selectize-arrow-offset: 15px;
+$selectize-caret-margin: 0 2px 0 0;
+$selectize-caret-margin-rtl: 0 4px 0 -2px;
+
+// Inside Item
+
+$selectize-item-border-width: 1px;
+$selectize-item-color: color($grey, 200);
+$selectize-item-text-color: $selectize-text-color;
+$selectize-item-border-color: rgba(color($black), .15);
+$selectize-item-color-active: darken($selectize-item-color, 10%);
+$selectize-item-text-color-active: $selectize-text-color;
+$selectize-item-border-color-active: #cacaca;
+$selectize-item-margin-x: .4rem;
+$selectize-item-margin-y: 0;
+$selectize-item-padding-x: 6px;
+$selectize-item-padding-y: 1px;
+
+// Dropdown
+
+$selectize-dropdown-border-color-top: #f0f0f0;
+$selectize-dropdown-item-active-color: #f5fafd;
+$selectize-dropdown-item-active-text-color: #495c68;
+$selectize-dropdown-item-create-text-color: rgba(red($selectize-text-color), green($selectize-text-color), blue($selectize-text-color), .5);
+$selectize-dropdown-item-create-active-text-color: $selectize-dropdown-item-active-text-color;
+
+// Dropdown Group
+
+$selectize-optgroup-color: #f8f8f8;
+$selectize-optgroup-text-color: $selectize-text-color;

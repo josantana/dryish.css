@@ -1,0 +1,40 @@
+// FORM
+// ========================================================================== //
+
+$input-font-size: 1.5rem;
+$input-item-font-size: 1.275rem;
+
+%input {
+    background-image: none;
+    border: 1px solid color($grey, 400);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(color($black), 0);
+    // box-shadow: 0 1px 0 rgba(color($black), .05), inset 0 1px 2px rgba(color($black), 0);
+    color: inherit;
+    display: inline-block;
+    font-family: inherit;
+    font-size: $input-font-size;
+    line-height: 1.35;
+    outline: 0;
+    overflow: hidden;
+    padding: .8rem 1.2rem;
+    position: relative;
+    transition: border-color ease-in-out $fast-speed, box-shadow ease-in-out $fast-speed, opacity ease-in-out $fast-speed;
+    width: 100%;
+    z-index: 1;
+
+    &:focus,
+    &.focus {
+        border-color: color($grey, 500);
+        box-shadow: inset 0 1px 2px rgba(color($black), .125);
+    }
+
+    &[disabled],
+    [disabled] &,
+    &.disabled,
+    .disabled & {
+        @extend %unselectable;
+        background-color: color($grey, 300);
+        opacity: .5;
+    }
+}
