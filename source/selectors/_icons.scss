@@ -1,7 +1,7 @@
 // ICONS
 // ========================================================================== //
 
-@include font-face('first-icons', './fonts/');
+@include font-face('first-icons', $font-path);
 
 %icons {
     font-family: 'first-icons', serif;
