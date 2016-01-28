@@ -1,15 +1,12 @@
-// Bulletproof font-face technique by Paul Irish (http://is.gd/sPTEJj)
+// Woff font format is suported by major browsers.
+// There is no need to load multiple formats.
 
 @mixin font-face ($name, $path) {
     @font-face {
         font-family: $name;
         font-style: normal;
         font-weight: normal;
-        src: url('#{$path}#{$name}.eot');
-        src: url('#{$path}#{$name}.eot?#iefix') format('embedded-opentype'),
-        url('#{$path}#{$name}.ttf') format('truetype'),
-        url('#{$path}#{$name}.woff') format('woff'),
-        url('#{$path}#{$name}.svg#@{name}') format('svg');
+        src: url('#{$path}#{$name}.woff') format('woff');
     }
 }
 
