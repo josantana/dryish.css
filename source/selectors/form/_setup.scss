@@ -1,3 +1,47 @@
+// React Select
+
+$select-input-placeholder: #aaa !default;
+$select-text-color: #333 !default;
+$select-noresults-color: lighten($select-text-color, 40%) !default;
+$select-input-border-focus: #08c !default; // blue
+$select-link-hover-color: $select-input-border-focus !default;
+
+$select-input-height: 36px !default;
+$select-input-internal-height: ($select-input-height - ($input-border-width * 2)) !default;
+
+// arrow indicator
+$select-arrow-color: #999 !default;
+$select-arrow-color-hover: #666 !default;
+$select-arrow-width: 5px !default;
+
+// clear "x" button
+$select-clear-size: floor(($select-input-height / 2)) !default;
+$select-clear-color: #999 !default;
+$select-clear-hover-color: #d0021b !default; // red
+$select-clear-width: ($select-input-internal-height / 2) !default;
+
+// menu options
+$select-menu-zindex: 1000 !default;
+$select-menu-max-height: 200px !default;
+$select-option-color: lighten($select-text-color, 20%) !default;
+$select-option-bg: $input-bg !default;
+$select-option-focused-color: inherit !default;
+$select-option-focused-bg: #f2f9fc !default; // pale blue
+$select-option-disabled-color: lighten($select-text-color, 60%) !default;
+
+// Select item
+$select-item-bg: #f2f9fc !default;
+$select-item-color: #08c !default; // pale blue
+$select-item-border-color: darken($select-item-bg, 10%) !default;
+$select-item-hover-color: darken($select-item-color, 5%) !default; // pale blue
+$select-item-hover-bg: darken($select-item-bg, 5%) !default;
+$select-item-font-size: .9em !default;
+$select-item-gutter: 5px !default;
+$select-item-padding-vertical: 2px !default;
+$select-item-padding-horizontal: 5px !default;
+$select-item-disabled-color: darken($input-bg-disabled, 25%);
+$select-item-disabled-border-color: darken($input-bg-disabled, 10%) !default;
+
 // Selectize Setup Variables
 
 $selectize-font-family: inherit;
