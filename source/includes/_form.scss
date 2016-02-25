@@ -1,14 +1,24 @@
 // FORM
 // ========================================================================== //
 
-$input-font-size: 1.5rem;
-$input-item-font-size: 1.275rem;
+$input-bg: color($white) !default;
+$input-font-size: 1.5rem !default;
+$input-item-font-size: 1.275rem !default;
+$input-border-color: color($grey, 400) !default;
+$input-focused-border-color: darken($input-border-color, 15%) !default;
+$input-border-width: 1px !default;
+$input-border-radius: 2px !default;
+$input-bg-disabled: color($grey, 300) !default;
+$input-horizontal-padding: 1.2rem !default;
+$input-vertical-padding: .8rem !default;
 
 %input {
     background-image: none;
-    border: 1px solid color($grey, 400);
-    border-radius: 2px;
-    box-shadow: inset 0 1px 2px rgba(color($black), 0);
+    border: 1px solid $input-border-color;
+    border-collapse: separate;
+    border-radius: $input-border-radius;
+    border-spacing: 0;
+    box-shadow: 0 0 0 rgba(color($black), .06), inset 0 1px 2px rgba(color($black), 0);
     // box-shadow: 0 1px 0 rgba(color($black), .05), inset 0 1px 2px rgba(color($black), 0);
     color: inherit;
     display: inline-block;
@@ -17,16 +27,23 @@ $input-item-font-size: 1.275rem;
     line-height: 1.35;
     outline: 0;
     overflow: hidden;
-    padding: .8rem 1.2rem;
+    padding: $input-vertical-padding $input-horizontal-padding;
     position: relative;
     transition: border-color ease-in-out $fast-speed, box-shadow ease-in-out $fast-speed, opacity ease-in-out $fast-speed;
     width: 100%;
     z-index: 1;
 
+    &:hover,
+    &.hover {
+        box-shadow: 0 1px 0 rgba(color($black), .06);
+    }
+
     &:focus,
-    &.focus {
-        border-color: color($grey, 500);
-        box-shadow: inset 0 1px 2px rgba(color($black), .125);
+    &.focus,
+    &.is-focused,
+    &.is-open {
+        border-color: $input-focused-border-color;
+        box-shadow: 0 0 0 rgba(color($black), .06), inset 0 1px 2px rgba(color($black), .125);
     }
 
     &[disabled],
@@ -34,7 +51,7 @@ $input-item-font-size: 1.275rem;
     &.disabled,
     .disabled & {
         @extend %unselectable;
-        background-color: color($grey, 300);
+        background-color: $input-bg-disabled;
         opacity: .5;
     }
 }
