@@ -1,0 +1,69 @@
+// GRID
+// ========================================================================== //
+
+@mixin make-relative-grid-columns ($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+
+    // Common properties for all breakpoints
+    %grid-column {
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+        // Inner gutter via padding
+        padding-left: ($gutter / 2);
+        padding-right: ($gutter / 2);
+        position: relative;
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+
+        @for $i from 1 through $columns {
+            .col-#{$breakpoint}-#{$i} {
+                @extend %grid-column;
+            }
+        }
+
+        @include media-breakpoint-up($breakpoint) {
+
+            // Work around cross-media @extend (https://github.com/sass/sass/issues/1050)
+            %grid-column-float-#{$breakpoint} {
+                float: left;
+            }
+
+            @for $i from $columns through 1 {
+                .col-#{$breakpoint}-#{$i} {
+                    @if not $enable-flex {
+                        @extend %grid-column-float-#{$breakpoint};
+                    }
+                    @include make-col-span($i, $columns);
+                }
+
+                @for $j from $i through 1 {
+                    .col-#{$breakpoint}-#{$i} .row .col-#{$breakpoint}-#{$j} {
+                        @include make-col-span($j, $i);
+                    }
+                }
+            }
+
+            @each $modifier in (pull, push, offset) {
+                @for $i from 0 through $columns {
+                    .col-#{$breakpoint}-#{$modifier}-#{$i} {
+                        @include make-col-modifier($modifier, $i, $columns)
+                    }
+
+                    @for $j from $i through 1 {
+                        @if $i != 0 {
+                            .col-#{$breakpoint}-#{$i} .row .col-#{$breakpoint}-#{$modifier}-#{$j} {
+                                @include make-col-modifier($modifier, $j, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Append relative columns
+
+@if $enable-grid-classes {
+    @include make-relative-grid-columns();
+}
