@@ -1,41 +1,19 @@
 // First.css
 @charset 'UTF-8';
 
-// Setup
+// $enable-flex: true;
+// $enable-flex-boxes: false !default;
+// $enable-flex-boxes: true;
 
-@import 'includes/setup';
-@import 'includes/color-palette';
-@import 'selectors/normalize';
+$bootstrap-path: '../node_modules/bootstrap/scss';
 
-// Includes
+// Bootstrap
+// @import '../node_modules/bootstrap/scss/variables';
+// @import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/bootstrap-flex';
 
-@import 'includes/align';
-@import 'includes/animation';
-@import 'includes/button';
-@import 'includes/form';
-@import 'includes/layout';
-@import 'includes/loading';
-@import 'includes/media';
-@import 'includes/normalize';
-@import 'includes/position';
-@import 'includes/shape';
-@import 'includes/state';
-@import 'includes/text';
+// Grid System Modification
+@import 'selectors/grid';
 
-// Selectors
-
-@import 'selectors/icons';
-@import 'selectors/align';
-@import 'selectors/animation';
-@import 'selectors/button';
-@import 'selectors/emojione';
-@import 'selectors/form';
-@import 'selectors/form/setup';
-@import 'selectors/form/selectize';
-@import 'selectors/layout';
-@import 'selectors/loading';
-@import 'selectors/media';
-@import 'selectors/media-query';
-@import 'selectors/position';
-@import 'selectors/state';
-@import 'selectors/text';
+// Container Layout System
+@import 'selectors/container';
