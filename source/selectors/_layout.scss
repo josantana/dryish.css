@@ -261,7 +261,7 @@ layout,
     [layout],
     .layout {
         &[orientation="auto-vertical"],
-        .layout-auto-vertical {
+        &.layout-auto-vertical {
             flex-direction: column;
 
             > * {
